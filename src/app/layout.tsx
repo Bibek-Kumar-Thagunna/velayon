@@ -16,8 +16,17 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "Bibek Kumar Thagunna | The Architect",
-  description: "Full-stack engineer and system architect. Building the digital infrastructure of tomorrow with precision and elegance.",
-  keywords: ["Bibek Kumar Thagunna", "Software Engineer Nepal", "Full Stack Developer", "Velayon Founder", "System Architect"],
+  description: "Full-stack engineer and system architect. Building the digital infrastructure of tomorrow with precision and elegance. Founder of Velayon.",
+  keywords: [
+    "Bibek Kumar Thagunna",
+    "System Architect Nepal",
+    "Hire Full Stack Developer",
+    "Velayon Founder",
+    "Software Consultancy",
+    "React Native Expert",
+    "Next.js Architect",
+    "Kathmandu Tech Leader"
+  ],
   authors: [{ name: "Bibek Kumar Thagunna" }],
   openGraph: {
     title: "Bibek Kumar Thagunna | The Architect",
@@ -25,6 +34,8 @@ export const metadata: Metadata = {
     type: "profile",
     locale: "en_US",
     siteName: "Bibek Kumar Thagunna",
+    url: "https://bibek.velayon.com",
+    images: ["/og-image.jpg"], // Assuming default or will be added
   },
   twitter: {
     card: "summary_large_image",
@@ -35,6 +46,24 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Bibek Kumar Thagunna",
+  "jobTitle": "System Architect",
+  "url": "https://bibek.velayon.com",
+  "sameAs": [
+    "https://velayon.com",
+    "https://github.com/Bibek-Kumar-Thagunna",
+    "https://www.linkedin.com/in/bibek-thagunna"
+  ],
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Velayon"
+  },
+  "description": "Full-stack engineer and system architect based in Nepal, specializing in high-performance web infrastructure and AI integration."
 };
 
 export default function RootLayout({
@@ -48,6 +77,10 @@ export default function RootLayout({
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-[#050505] text-[#E5E5E5]`}
         suppressHydrationWarning
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {/* Grain Texture Overlay */}
         <div className="grain-overlay" aria-hidden="true" />
 
