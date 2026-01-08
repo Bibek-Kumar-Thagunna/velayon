@@ -10,7 +10,7 @@ import { Navigation } from "@/components/ui/Navigation";
 export default function CompanySite() {
   return (
     <GridBackground suppressHydrationWarning>
-      <div className="min-h-screen text-white text-sm selection:bg-emerald-500/30">
+      <div className="min-h-screen text-white text-sm selection:bg-emerald-500/30" suppressHydrationWarning>
 
         {/* Navigation */}
         <Navigation />

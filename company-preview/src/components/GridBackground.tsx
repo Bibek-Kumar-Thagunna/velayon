@@ -23,6 +23,7 @@ export function GridBackground({ children, suppressHydrationWarning }: { childre
                         backgroundPosition,
                     }}
                     aria-hidden="true"
+                    suppressHydrationWarning
                 />
             </ClientOnly>
 
@@ -33,6 +34,7 @@ export function GridBackground({ children, suppressHydrationWarning }: { childre
                     background: 'radial-gradient(circle at 50% 0%, rgba(34, 197, 94, 0.03) 0%, transparent 60%)',
                 }}
                 aria-hidden="true"
+                suppressHydrationWarning
             />
 
             {/* Corner Plus Signs - Client Only */}
@@ -43,6 +45,7 @@ export function GridBackground({ children, suppressHydrationWarning }: { childre
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
                     aria-hidden="true"
+                    suppressHydrationWarning
                 >
                     +
                 </motion.div>
@@ -52,6 +55,7 @@ export function GridBackground({ children, suppressHydrationWarning }: { childre
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6 }}
                     aria-hidden="true"
+                    suppressHydrationWarning
                 >
                     +
                 </motion.div>
@@ -61,6 +65,7 @@ export function GridBackground({ children, suppressHydrationWarning }: { childre
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.7 }}
                     aria-hidden="true"
+                    suppressHydrationWarning
                 >
                     +
                 </motion.div>
@@ -70,6 +75,7 @@ export function GridBackground({ children, suppressHydrationWarning }: { childre
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8 }}
                     aria-hidden="true"
+                    suppressHydrationWarning
                 >
                     +
                 </motion.div>
