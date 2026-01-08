@@ -15,21 +15,21 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Velayon | Systems Engineer",
-  description: "Building production-grade systems with Agentic AI. Systems architecture, full-stack development, and AI-assisted engineering.",
-  keywords: ["systems engineer", "agentic ai", "full-stack developer", "production systems", "ai development"],
-  authors: [{ name: "Velayon" }],
+  title: "Bibek Kumar Thagunna | The Architect",
+  description: "Full-stack engineer and system architect. Building the digital infrastructure of tomorrow with precision and elegance.",
+  keywords: ["Bibek Kumar Thagunna", "Software Engineer Nepal", "Full Stack Developer", "Velayon Founder", "System Architect"],
+  authors: [{ name: "Bibek Kumar Thagunna" }],
   openGraph: {
-    title: "Velayon | Systems Engineer",
-    description: "Building production-grade systems with Agentic AI at 10x velocity.",
-    type: "website",
+    title: "Bibek Kumar Thagunna | The Architect",
+    description: "Building the digital infrastructure of tomorrow with precision and elegance.",
+    type: "profile",
     locale: "en_US",
-    siteName: "Velayon",
+    siteName: "Bibek Kumar Thagunna",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Velayon | Systems Engineer",
-    description: "Building production-grade systems with Agentic AI at 10x velocity.",
+    title: "Bibek Kumar Thagunna | The Architect",
+    description: "Building the digital infrastructure of tomorrow with precision and elegance.",
   },
   robots: {
     index: true,
