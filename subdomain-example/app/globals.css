@@ -272,21 +272,18 @@ body {
 
 /* === SECTION SPACING === */
 .section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding: 4rem 0;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding: 6rem 0;
   }
 }
 
 @media (min-width: 1024px) {
   .section {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding: 8rem 0;
   }
 }
 
@@ -294,12 +291,6 @@ body {
 .divider {
   height: 1px;
   background: var(--border-subtle);
-}
-
-/* Remove section top padding when needed */
-.section-no-top-padding .section,
-.section.no-top-padding {
-  padding-top: 0 !important;
 }
 
 /* === ANIMATIONS === */
@@ -556,8 +547,7 @@ body {
 /* Landscape phone optimization */
 @media (max-width: 767px) and (orientation: landscape) {
   .section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 3rem 0;
   }
 
   .min-h-screen {

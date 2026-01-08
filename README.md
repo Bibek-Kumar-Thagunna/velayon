@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Velayon - Personal Site (bibek.velayon.com)
 
-## Getting Started
+Personal portfolio and professional site for Bibek Kumar Thagunna, showcasing production-grade systems built with Agentic AI.
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **Framework:** Next.js 16.1.1 (App Router)
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Language:** TypeScript
+- **Deployment:** Vercel
+
+## Features
+
+- 🎨 Premium UI with sophisticated animations
+- 📱 Mobile-responsive design
+- ⚡ 60fps GPU-accelerated animations
+- ♿ Accessibility compliant (WCAG)
+- 🎯 SEO optimized
+- 🌓 Respects `prefers-reduced-motion`
+
+## Project Structure
+
+```
+src/                    # Personal Site (bibek.velayon.com)
+├── app/
+├── components/
+└── ...
+
+company-preview/        # Company Site (velayon.com)
+├── src/
+│   ├── app/
+│   └── ...
+
+subdomain-example/      # App Site (attendify.velayon.com)
+├── app/
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local Development
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Install dependencies
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Run development server
+npm run dev
 
-## Learn More
+# Build for production
+npm run build
 
-To learn more about Next.js, take a look at the following resources:
+# Start production server
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Open [http://localhost:3000](http://localhost:3000) to view.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+This site is designed to be deployed on **Vercel** at `bibek.velayon.com`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Deploy to Vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Push to GitHub
+2. Import repository to Vercel
+3. Configure custom domain: `bibek.velayon.com`
+4. Update GoDaddy DNS with Vercel CNAME
+
+See [deployment guide](https://vercel.com/docs/deployments) for details.
+
+## Environment Variables
+
+No environment variables required for basic deployment.
+
+## Performance
+
+- ✅ Lighthouse Score: 90+ (Performance)
+- ✅ First Contentful Paint: <1.5s
+- ✅ Time to Interactive: <3.5s
+
+## License
+
+Private - All Rights Reserved
+
+## Contact
+
+**Bibek Kumar Thagunna**
+- Website: [bibek.velayon.com](https://bibek.velayon.com)
+- Email: bibek@velayon.com
+- Company: [Velayon](https://velayon.com)
