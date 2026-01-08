@@ -21,11 +21,17 @@ export function WorldGlobe({ className }: { className?: string }) {
             if (containerRef.current) {
                 // Use width as the reference for a perfect square
                 const width = containerRef.current.offsetWidth;
-                setSize(width);
+                if (width > 0) {
+                    setSize(width);
+                }
             }
         };
 
+        // Immediate check
         updateSize();
+
+        // Small delay check (fixes some production hydration races)
+        setTimeout(updateSize, 100);
 
         const resizeObserver = new ResizeObserver(updateSize);
         resizeObserver.observe(containerRef.current);
