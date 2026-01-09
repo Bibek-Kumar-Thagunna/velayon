@@ -7,7 +7,7 @@ const showcases = [
     {
         title: "Attendify",
         category: "Education SaaS",
-        description: "Geofenced attendance tracking trusted by 15+ institutions. 300+ daily active users.",
+        description: "Geofenced attendance tracking with QR verification. Production-ready and deployed.",
         metric: "95% fraud reduction",
         color: "#22C55E",
         gradient: "from-emerald-500/20 to-emerald-950/20",
@@ -17,7 +17,7 @@ const showcases = [
     {
         title: "HMS Core",
         category: "Hospitality ERP",
-        description: "Complete hotel operations platform managing 25+ properties across Nepal.",
+        description: "Complete hotel operations platform. Multi-platform deployment ready for pilot customers.",
         metric: "40% efficiency gain",
         color: "#8B5CF6",
         gradient: "from-purple-500/20 to-purple-950/20",
@@ -37,7 +37,7 @@ const showcases = [
     {
         title: "Expense Tracker",
         category: "Mobile Finance",
-        description: "AI-powered SMS parsing for automated expense tracking. 200+ beta users.",
+        description: "AI-powered SMS parsing for automated expense tracking. Fully functional demo available.",
         metric: "Zero manual entry",
         color: "#F59E0B",
         gradient: "from-amber-500/20 to-amber-950/20",
@@ -53,7 +53,7 @@ export function SocialDemoGrid() {
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12">
                     <div>
                         <h2 className="text-4xl font-bold text-white mb-3">Production Systems</h2>
-                        <p className="text-zinc-400">Real software. Real clients. Real results.</p>
+                        <p className="text-zinc-400">Deployed systems. Real technology. Available for testing.</p>
                     </div>
                     <Link
                         href="/products"

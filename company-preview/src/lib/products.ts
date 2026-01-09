@@ -192,10 +192,10 @@ export const products: Product[] = [
         ],
 
         stats: [
-            { label: 'Daily Active Users', value: '300+' },
-            { label: 'Institutions', value: '15+' },
-            { label: 'Attendance Records', value: '50k+' },
-            { label: 'Uptime', value: '99.9%' }
+            { label: 'Deployment Status', value: 'Production Ready' },
+            { label: 'Processing Capacity', value: '10k+ requests' },
+            { label: 'Geofencing Accuracy', value: '±5 meters' },
+            { label: 'Platform Support', value: 'Web + Mobile' }
         ],
 
         techStack: ['Flutter', 'Firebase', 'Google Maps API', 'Node.js', 'PostgreSQL']
@@ -404,10 +404,10 @@ export const products: Product[] = [
         ],
 
         stats: [
-            { label: 'Properties Using HMS', value: '25+' },
-            { label: 'Daily Transactions', value: '1000+' },
-            { label: 'Support Response', value: '<2hr' },
-            { label: 'System Uptime', value: '99.8%' }
+            { label: 'Deployment Status', value: 'Ready for Pilots' },
+            { label: 'Platform Coverage', value: 'Windows/Mac/Linux' },
+            { label: 'Module Completeness', value: '100%' },
+            { label: 'Multi-tenant Ready', value: 'Yes' }
         ],
 
         techStack: ['Next.js', 'Node.js', 'Prisma', 'PostgreSQL', 'Electron']
@@ -514,7 +514,7 @@ export const products: Product[] = [
             { label: 'Parsing Accuracy', value: '95%' },
             { label: 'Supported Banks', value: '50+' },
             { label: 'Categories', value: '20+' },
-            { label: 'Beta Users', value: '200+' }
+            { label: 'Status', value: 'Demo Available' }
         ],
 
         techStack: ['Flutter', 'Firebase', 'Python ML', 'TensorFlow Lite']

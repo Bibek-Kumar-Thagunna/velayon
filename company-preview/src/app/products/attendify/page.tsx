@@ -44,7 +44,7 @@ export default function AttendifyPage() {
                                     <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                                 </span>
                                 <span className="text-xs font-mono text-emerald-500 uppercase tracking-wider">
-                                    Production Ready • 300+ Daily Active Users
+                                    Production Ready • Deployed and Functional
                                 </span>
                             </div>
 
@@ -56,7 +56,7 @@ export default function AttendifyPage() {
                             {/* Subheadline */}
                             <p className="text-2xl text-zinc-400 mb-8 max-w-3xl">
                                 Eliminate manual attendance tracking. Prevent proxy attendance with geofencing.
-                                Get real-time insights. Trusted by 15+ educational institutions.
+                                Get real-time insights. Available for pilot deployment.
                             </p>
 
                             {/* Stats Row */}

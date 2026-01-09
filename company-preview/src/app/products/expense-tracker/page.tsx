@@ -307,7 +307,7 @@ export default function ExpenseTrackerPage() {
                             Stop Losing Track of Money
                         </h2>
                         <p className="text-xl text-zinc-400 mb-8">
-                            Join 200+ beta users already automating their expense tracking.
+                            Fully functional demo available for testing. Ready for early adopters.
                         </p>
                         <Link
                             href="/contact?product=expense-tracker"
