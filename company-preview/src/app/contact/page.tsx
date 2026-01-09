@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { GridBackground } from "../../components/GridBackground";
 import { Navigation } from "../../components/ui/Navigation";
 import dynamic from "next/dynamic";
-import { Navigation } from "../../components/ui/Navigation";
 
 const ContactForm = dynamic(() => import("../../components/ui/ContactForm").then(mod => mod.ContactForm), {
     ssr: false,
