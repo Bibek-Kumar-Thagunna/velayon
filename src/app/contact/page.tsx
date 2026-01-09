@@ -17,7 +17,7 @@ export default function Contact() {
                         transition={{ duration: 0.6 }}
                         className="mb-16"
                     >
-                        <span className="font-mono text-xs text-white/50 mb-4 block">&lt;05.CONTACT /&gt;</span>
+                        <span className="section-label block mb-4">&lt;06.CONTACT&gt;</span>
                         <h1 className="text-headline text-white mb-6">
                             Let's Work Together
                         </h1>
