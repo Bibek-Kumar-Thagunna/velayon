@@ -405,7 +405,7 @@ export const products: Product[] = [
 
         stats: [
             { label: 'Deployment Status', value: 'Ready for Pilots' },
-            { label: 'Platform Coverage', value: 'Windows/Mac/Linux' },
+            { label: 'Platform Coverage', value: 'Cross-platform' },
             { label: 'Module Completeness', value: '100%' },
             { label: 'Multi-tenant Ready', value: 'Yes' }
         ],
