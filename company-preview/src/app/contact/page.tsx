@@ -1,10 +1,20 @@
 "use client";
 
-import { Suspense } from "react";
+// import { Suspense } from "react"; 
 import { motion } from "framer-motion";
 import { GridBackground } from "../../components/GridBackground";
 import { Navigation } from "../../components/ui/Navigation";
-import { ContactForm } from "../../components/ui/ContactForm";
+import dynamic from "next/dynamic";
+import { Navigation } from "../../components/ui/Navigation";
+
+const ContactForm = dynamic(() => import("../../components/ui/ContactForm").then(mod => mod.ContactForm), {
+    ssr: false,
+    loading: () => (
+        <div className="w-full h-96 bg-zinc-900/50 rounded-xl flex items-center justify-center">
+            <span className="text-zinc-500">Loading form...</span>
+        </div>
+    )
+});
 import Link from "next/link";
 
 export default function ContactPage() {
@@ -116,13 +126,7 @@ export default function ContactPage() {
                                 Fill out the form below and we'll get back to you within 24 hours.
                             </p>
                         </div>
-                        <Suspense fallback={
-                            <div className="w-full h-96 bg-zinc-900/50 rounded-xl flex items-center justify-center">
-                                <span className="text-zinc-500">Loading form...</span>
-                            </div>
-                        }>
-                            <ContactForm />
-                        </Suspense>
+                        <ContactForm />
                     </div>
                 </section>
 
