@@ -44,40 +44,73 @@ export function HeroSection() {
                     </span>
                 </motion.h1>
 
+                {/* Availability & Timezone */}
+                <motion.div
+                    className="flex flex-wrap items-center gap-2 mb-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.4 }}
+                >
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#22C55E]/10 border border-[#22C55E]/30 rounded-lg">
+                        <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse" />
+                        <span className="text-sm font-medium text-[#22C55E]">Available for Immediate Start</span>
+                    </div>
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0A0A0A] border border-[#2A2A2A] rounded-lg">
+                        <span className="text-sm text-[#A1A1AA]">🕐 UTC+5:45</span>
+                        <span className="text-[#333333]">•</span>
+                        <span className="text-sm text-[#6B7280]">4-6hr US overlap</span>
+                    </div>
+                </motion.div>
+
                 {/* Credential Line */}
                 <motion.div
                     className="text-sm text-[#6B7280] font-mono mb-8"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.4 }}
+                    transition={{ duration: 0.6, delay: 0.45 }}
                 >
-                    <span className="text-[#A1A1AA]">Currently:</span> Building Velayon
+                    <span className="text-[#A1A1AA]">Specialty:</span> AI-native systems architecture
                     <span className="text-[#333333] mx-2">•</span>
-                    <span className="text-[#A1A1AA]">Open to:</span> Remote roles & contracts
+                    <span className="text-[#A1A1AA]">Seeking:</span> Remote contracts & full-time roles
                 </motion.div>
 
                 {/* CTAs */}
                 <motion.div
-                    className="flex flex-wrap gap-4 mb-16"
+                    className="flex flex-wrap gap-3 mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.5 }}
                 >
                     <MagneticButton
+                        href="/contact"
+                        className="btn-primary inline-block"
+                    >
+                        Get in Touch
+                    </MagneticButton>
+                    <MagneticButton
                         href="/resume.pdf"
                         target="_blank"
-                        className="btn-primary inline-block"
+                        className="btn-secondary inline-block"
                     >
                         Resume
                     </MagneticButton>
                     <MagneticButton
-                        href="/contact"
-                        className="btn-secondary group inline-flex items-center"
+                        href="https://linkedin.com/in/bibek-thagunna"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-secondary inline-flex items-center gap-2"
                     >
-                        Get in Touch
-                        <span className="inline-block ml-2 transition-transform group-hover:translate-x-1">
-                            →
-                        </span>
+                        <span className="text-base">in</span>
+                        <span>LinkedIn</span>
+                    </MagneticButton>
+                    <MagneticButton
+                        href="https://github.com/velayon"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-secondary inline-flex items-center gap-2"
+                    >
+                        <span>💻</span>
+                        <span>GitHub</span>
                     </MagneticButton>
                 </motion.div>
 
@@ -86,17 +119,21 @@ export function HeroSection() {
                     className="inline-block"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.6 }}
+                    transition={{ duration: 0.6, delay: 0.55 }}
                 >
                     <div className="border border-[#2A2A2A] rounded-lg bg-[#0A0A0A]/50 px-4 py-3 sm:px-6 sm:py-4">
                         <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm font-mono">
                             <div className="flex items-center gap-2">
                                 <span className="text-[#22C55E]">▸</span>
-                                <span className="text-[#E5E5E5]">5 systems built</span>
+                                <span className="text-[#E5E5E5]">5 deployed demos</span>
                             </div>
                             <div className="hidden sm:block w-px h-4 bg-[#2A2A2A]" />
                             <div className="flex items-center gap-2">
                                 <span className="text-[#22C55E]">▸</span>
+                                <span className="text-[#E5E5E5]">AI-orchestrated</span>
+                            </div>
+                            <div className="hidden sm:block w-px h-4 bg-[#2A2A2A]" />
+                            <div className="flex items-center gap-2">
                                 <span className="text-[#E5E5E5]">2026</span>
                                 <span className="text-[#6B7280]">•</span>
                                 <span className="text-[#A1A1AA]">Remote</span>

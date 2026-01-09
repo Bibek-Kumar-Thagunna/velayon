@@ -4,38 +4,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { MagneticButton, AvailabilityStatus, SpotlightCard } from "@/components";
 
-// Honest stats - emphasizing systems engineering capability
-const stats = [
-    { value: "1+", label: "Year Building", detail: "Systems engineering" },
-    { value: "5", label: "Systems Built", detail: "End-to-end solutions" },
-    { value: "UTC+5:45", label: "Timezone", detail: "Nepal (flexible overlap)" },
-    { value: "∞", label: "Platforms", detail: "Web, Mobile, Desktop, IoT" }
-];
-
-// Key strengths - Systems Engineer positioning
-const strengths = [
-    {
-        title: "Complete Systems Builder",
-        description: "Not just apps—full systems. CCTV face recognition for attendance, hotel management, location-based anti-proxy systems. End-to-end architecture to deployment.",
-        icon: "🏗️"
-    },
-    {
-        title: "Platform Agnostic",
-        description: "Web apps, mobile apps, desktop (EXE, .deb, macOS), embedded systems—whatever the problem needs. I build solutions, not just products.",
-        icon: "🔧"
-    },
-    {
-        title: "AI-Native Engineering",
-        description: "Leverage agentic AI for 10x productivity. I can build anything faster: ML systems, automation pipelines, intelligent backends—no limitations.",
-        icon: "🤖"
-    },
-    {
-        title: "US Timezone Flexibility",
-        description: "Flexible schedule with 4-6 hours overlap with EST/PST. Available for standups, syncs, and async communication.",
-        icon: "🌍"
-    }
-];
-
 // Social/Professional links - prioritized for recruiters
 const professionalLinks = [
     {
@@ -107,19 +75,17 @@ export function ContactSection() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                    I Build Systems
+                    Let's Build Together
                 </motion.h2>
 
-                {/* Value proposition - Systems Engineer */}
+                {/* Value proposition */}
                 <motion.p
                     className="text-xl text-[#A1A1AA] max-w-2xl mb-8"
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.15 }}
                 >
-                    Not just apps—<span className="text-white">complete end-to-end solutions</span>.
-                    Face recognition for CCTV, smart attendance systems, hotel management—web, mobile, desktop, or IoT.
-                    <span className="text-[#22C55E]"> Any platform. Any problem.</span>
+                    Ready for your next project or role. <span className="text-white">I respond within 24 hours</span> and can start immediately.
                 </motion.p>
 
                 {/* Availability Status */}
@@ -135,128 +101,27 @@ export function ContactSection() {
                     />
                 </motion.div>
 
-                {/* Quick Stats Grid */}
+                {/* Quick Credibility */}
                 <motion.div
-                    className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12"
+                    className="mb-12 p-4 border border-[#2A2A2A] rounded-lg bg-[#0A0A0A]/30"
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.25 }}
                 >
-                    {stats.map((stat, idx) => (
-                        <SpotlightCard
-                            key={stat.label}
-                            className="bg-[#0A0A0A] border border-[#1A1A1A] hover:border-[#333] transition-colors"
-                            spotlightColor="rgba(34, 197, 94, 0.1)"
-                        >
-                            <div className="p-4 text-center">
-                                <div className="text-2xl md:text-3xl font-bold text-white mb-1">
-                                    {stat.value}
-                                </div>
-                                <div className="text-sm font-medium text-[#E5E5E5]">
-                                    {stat.label}
-                                </div>
-                                <div className="text-xs text-[#6B7280] mt-1">
-                                    {stat.detail}
-                                </div>
-                            </div>
-                        </SpotlightCard>
-                    ))}
-                </motion.div>
-
-                {/* What I Build */}
-                <motion.div
-                    className="mb-12 p-6 border border-[#2A2A2A] rounded-lg bg-[#0A0A0A]/50"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                >
-                    <h3 className="text-lg font-semibold text-white mb-4">What I Can Build For You</h3>
-                    <div className="grid md:grid-cols-3 gap-6">
-                        <div className="space-y-2">
-                            <div className="flex items-center gap-2">
-                                <span className="text-[#22C55E] text-lg">🏗️</span>
-                                <span className="text-white font-medium">Complete Systems</span>
-                            </div>
-                            <p className="text-sm text-[#A1A1AA] pl-6">
-                                End-to-end business solutions with backends, frontends, databases, and deployment
-                            </p>
+                    <div className="flex flex-wrap items-center justify-center gap-4 text-sm">
+                        <div className="flex items-center gap-2">
+                            <span className="text-[#22C55E]">✓</span>
+                            <span className="text-[#E5E5E5]">5 Production Systems Built</span>
                         </div>
-                        <div className="space-y-2">
-                            <div className="flex items-center gap-2">
-                                <span className="text-[#22C55E] text-lg">📱</span>
-                                <span className="text-white font-medium">Multi-Platform Apps</span>
-                            </div>
-                            <p className="text-sm text-[#A1A1AA] pl-6">
-                                Web, iOS, Android, Windows, macOS, Linux—one codebase or native
-                            </p>
+                        <div className="hidden sm:block w-px h-4 bg-[#2A2A2A]" />
+                        <div className="flex items-center gap-2">
+                            <span className="text-[#22C55E]">✓</span>
+                            <span className="text-[#E5E5E5]">Nepal → Global Remote (UTC+5:45)</span>
                         </div>
-                        <div className="space-y-2">
-                            <div className="flex items-center gap-2">
-                                <span className="text-[#22C55E] text-lg">🤖</span>
-                                <span className="text-white font-medium">AI-Powered Solutions</span>
-                            </div>
-                            <p className="text-sm text-[#A1A1AA] pl-6">
-                                Face recognition, automation, ML pipelines—smart systems that work
-                            </p>
-                        </div>
-                    </div>
-                </motion.div>
-
-                {/* Why Choose Me - Strengths for Remote Work */}
-                <motion.div
-                    className="mb-12"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5, delay: 0.35 }}
-                >
-                    <h3 className="text-sm font-mono text-[#6B7280] mb-6 uppercase tracking-wider">
-                        // Why Work With Me
-                    </h3>
-                    <div className="grid md:grid-cols-2 gap-4">
-                        {strengths.map((strength, idx) => (
-                            <motion.div
-                                key={strength.title}
-                                className="p-5 border border-[#1A1A1A] rounded-lg hover:border-[#333] transition-colors bg-[#0A0A0A]/30"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                                transition={{ duration: 0.4, delay: 0.4 + idx * 0.1 }}
-                            >
-                                <div className="flex items-start gap-4">
-                                    <span className="text-2xl">{strength.icon}</span>
-                                    <div>
-                                        <h4 className="text-white font-medium mb-1">{strength.title}</h4>
-                                        <p className="text-sm text-[#A1A1AA]">{strength.description}</p>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </motion.div>
-
-                {/* Rate Card - Transparent Pricing */}
-                <motion.div
-                    className="mb-12 p-6 border border-[#F59E0B]/30 rounded-lg bg-[#F59E0B]/5"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={isInView ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5, delay: 0.45 }}
-                >
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                        <div>
-                            <h3 className="text-white font-medium mb-2 flex items-center gap-2">
-                                <span>💰</span>
-                                <span>Competitive Rates</span>
-                            </h3>
-                            <div className="space-y-1 text-sm">
-                                <p className="text-[#E5E5E5]">
-                                    <span className="text-[#F59E0B] font-semibold">Contract:</span> $15-25/hour depending on project scope
-                                </p>
-                                <p className="text-[#E5E5E5]">
-                                    <span className="text-[#F59E0B] font-semibold">Full-time:</span> $32,000/year for the right opportunity
-                                </p>
-                                <p className="text-[#A1A1AA] text-xs mt-2">
-                                    Open to negotiation • Quality work at competitive rates
-                                </p>
-                            </div>
+                        <div className="hidden sm:block w-px h-4 bg-[#2A2A2A]" />
+                        <div className="flex items-center gap-2">
+                            <span className="text-[#22C55E]">✓</span>
+                            <span className="text-[#E5E5E5]">Available Now</span>
                         </div>
                     </div>
                 </motion.div>
@@ -360,16 +225,57 @@ export function ContactSection() {
                     </div>
                 </motion.div>
 
-                {/* Final Personal Touch */}
+                {/* What Happens Next */}
                 <motion.div
-                    className="mt-12 text-center"
+                    className="mt-12 p-6 border border-[#2A2A2A] rounded-lg bg-[#0A0A0A]/30"
                     initial={{ opacity: 0, y: 20 }}
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.65 }}
                 >
+                    <h3 className="text-white font-medium mb-4">What Happens Next</h3>
+                    <div className="grid md:grid-cols-2 gap-4 text-sm text-[#A1A1AA]">
+                        <div className="flex items-start gap-3">
+                            <span className="text-[#22C55E] mt-0.5">✓</span>
+                            <div>
+                                <span className="text-white font-medium">I respond within 24 hours</span>
+                                <p className="text-xs mt-1">Usually much faster during business hours</p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-[#22C55E] mt-0.5">✓</span>
+                            <div>
+                                <span className="text-white font-medium">We schedule a discovery call</span>
+                                <p className="text-xs mt-1">15-30 minutes to discuss your project</p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-[#22C55E] mt-0.5">✓</span>
+                            <div>
+                                <span className="text-white font-medium">I send a proposal within 48 hours</span>
+                                <p className="text-xs mt-1">Timeline, scope, and pricing details</p>
+                            </div>
+                        </div>
+                        <div className="flex items-start gap-3">
+                            <span className="text-[#22C55E] mt-0.5">✓</span>
+                            <div>
+                                <span className="text-white font-medium">We can start within 1 week</span>
+                                <p className="text-xs mt-1">Or on your preferred timeline</p>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* Footer Note */}
+                <motion.div
+                    className="mt-8 text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 0.7 }}
+                >
                     <p className="text-[#6B7280] text-sm">
-                        Based in Nepal 🇳🇵 • Ready for global remote work •
-                        <span className="text-[#A1A1AA]"> English fluent</span>
+                        Based in Nepal 🇳🇵 • Remote-first • English Fluent
+                        <br />
+                        <span className="text-[#A1A1AA]">Timezone: UTC+5:45 (4-6hr overlap with US)</span>
                     </p>
                 </motion.div>
             </div>

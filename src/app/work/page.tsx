@@ -32,10 +32,10 @@ export default function WorkPage() {
                             &lt;02.WORK&gt;
                         </span>
                         <h1 className="text-display text-white mb-6">
-                            Selected Work
+                            Deployed Demos
                         </h1>
                         <p className="text-xl text-[#A1A1AA] max-w-2xl">
-                            Live systems built. From hotel management platforms to AI-powered solutions.
+                            Production-ready systems built using AI orchestration. <span className="text-white">Live and functional</span>, available for testing. No active users yet, but fully deployed and operational.
                         </p>
                     </motion.div>
 
@@ -57,8 +57,8 @@ export default function WorkPage() {
                                             <div className="card-content p-8 h-full flex flex-col">
                                                 <div className="flex items-center justify-between mb-6">
                                                     <span className={`px-2 py-1 rounded text-xs font-mono font-medium ${project.status === "Live"
-                                                            ? "bg-[#22C55E]/10 text-[#22C55E]"
-                                                            : "bg-[#F59E0B]/10 text-[#F59E0B]"
+                                                        ? "bg-[#22C55E]/10 text-[#22C55E]"
+                                                        : "bg-[#F59E0B]/10 text-[#F59E0B]"
                                                         }`}>
                                                         {project.status}
                                                     </span>

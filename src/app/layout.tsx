@@ -1,69 +1,65 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
 const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
-  display: "swap",
+  variable: "--font-jetbrains-mono",
 });
 
 export const metadata: Metadata = {
-  title: "Bibek Kumar Thagunna | The Architect",
-  description: "Full-stack engineer and system architect. Building the digital infrastructure of tomorrow with precision and elegance. Founder of Velayon.",
+  title: "Bibek Kumar Thagunna | Systems Engineer & Founder of Velayon Dynamics",
+  description: "Bibek Kumar Thagunna - Systems engineer building production-grade software with Agentic AI. Founder of Velayon Dynamics. Specialized in high-performance backends, cross-platform applications (Flutter/React), and AI-native workflows. Based in Kathmandu, Nepal.",
   keywords: [
     "Bibek Kumar Thagunna",
-    "System Architect Nepal",
-    "Hire Full Stack Developer",
-    "Velayon Founder",
-    "Software Consultancy",
-    "React Native Expert",
-    "Next.js Architect",
-    "Kathmandu Tech Leader"
-  ],
-  authors: [{ name: "Bibek Kumar Thagunna" }],
+    "Bibek Thagunna",
+    "The Architect",
+    "Systems Engineer Nepal",
+    "Velayon founder",
+    "Velayon Dynamics founder",
+    "Flutter developer Nepal",
+    "Agentic AI developer",
+    "full-stack engineer Kathmandu",
+    "software engineer Nepal",
+    "Kathmandu developer"
+  ].join(", "),
+  authors: [{ name: "Bibek Kumar Thagunna", url: "https://bibek.velayon.com" }],
+  creator: "Bibek Kumar Thagunna",
   openGraph: {
-    title: "Bibek Kumar Thagunna | The Architect",
-    description: "Building the digital infrastructure of tomorrow with precision and elegance.",
-    type: "profile",
-    locale: "en_US",
-    siteName: "Bibek Kumar Thagunna",
+    title: "Bibek Kumar Thagunna | Systems Engineer & Founder of Velayon Dynamics",
+    description: "Systems engineer building production-grade software. Founder of Velayon Dynamics. Specialized in Agentic AI, Flutter, and high-performance backends.",
     url: "https://bibek.velayon.com",
-    images: ["/og-image.jpg"], // Assuming default or will be added
+    siteName: "Bibek Kumar Thagunna",
+    locale: "en_US",
+    type: "profile",
+    images: [
+      {
+        url: "https://bibek.velayon.com/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Bibek Kumar Thagunna - Systems Engineer"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bibek Kumar Thagunna | The Architect",
-    description: "Building the digital infrastructure of tomorrow with precision and elegance.",
+    title: "Bibek Kumar Thagunna | Systems Engineer & Founder of Velayon Dynamics",
+    description: "Systems engineer building production-grade software. Founder of Velayon Dynamics.",
+    images: ["https://bibek.velayon.com/og-image.jpg"]
+  },
+  alternates: {
+    canonical: "https://bibek.velayon.com"
   },
   robots: {
     index: true,
     follow: true,
-  },
-};
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Bibek Kumar Thagunna",
-  "jobTitle": "System Architect",
-  "url": "https://bibek.velayon.com",
-  "sameAs": [
-    "https://velayon.com",
-    "https://github.com/Bibek-Kumar-Thagunna",
-    "https://www.linkedin.com/in/bibek-thagunna"
-  ],
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Velayon"
-  },
-  "description": "Full-stack engineer and system architect based in Nepal, specializing in high-performance web infrastructure and AI integration."
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  }
 };
 
 export default function RootLayout({
@@ -72,18 +68,52 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${jetbrainsMono.variable} antialiased bg-[#050505] text-[#E5E5E5]`}
-        suppressHydrationWarning
-      >
+    <html lang="en" className={jetbrainsMono.variable}>
+      <head>
+        {/* JSON-LD Person Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Bibek Kumar Thagunna",
+              alternateName: ["Bibek Thagunna", "The Architect"],
+              url: "https://bibek.velayon.com",
+              image: "https://bibek.velayon.com/profile.jpg",
+              jobTitle: "Founder & Systems Engineer",
+              description: "Systems engineer building production-grade software with Agentic AI. Founder of Velayon Dynamics. Specialized in high-performance backends, cross-platform applications (Flutter/React), and AI-native workflows.",
+              worksFor: {
+                "@type": "Organization",
+                name: "Velayon Dynamics",
+                url: "https://velayon.com"
+              },
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Kathmandu",
+                addressRegion: "Bagmati",
+                addressCountry: "NP"
+              },
+              sameAs: [
+                "https://velayon.com",
+                "https://github.com/Bibek-Kumar-Thagunna",
+                "https://linkedin.com/in/bibek-kumar-thagunna"
+              ],
+              knowsAbout: [
+                "Software Engineering",
+                "Agentic AI",
+                "Flutter Development",
+                "React Development",
+                "Full-stack Development",
+                "System Architecture",
+                "Machine Learning",
+                "Enterprise Software"
+              ]
+            })
+          }}
         />
-        {/* Grain Texture Overlay */}
-        <div className="grain-overlay" aria-hidden="true" />
-
+      </head>
+      <body className="bg-[#050505] text-white antialiased min-h-screen">
         {children}
       </body>
     </html>

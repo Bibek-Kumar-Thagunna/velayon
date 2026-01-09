@@ -61,10 +61,10 @@ export default function CompanySite() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 }}
                   >
-                    Global Systems.
+                    Enterprise Software.
                     <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-zinc-500">
-                      Zero Latency.
+                      Built to Scale.
                     </span>
                   </motion.h1>
 
@@ -75,8 +75,8 @@ export default function CompanySite() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
                   >
-                    We engineer autonomous software infrastructure that powers businesses across borders.
-                    From Nepal to the Cloud.
+                    Production-ready SaaS platforms solving real business problems across industries.
+                    Built from Nepal, deployed globally.
                   </motion.p>
 
                   {/* CTA Buttons */}
@@ -87,16 +87,16 @@ export default function CompanySite() {
                     transition={{ duration: 0.6, delay: 0.3 }}
                   >
                     <Link
-                      href="#products"
+                      href="/contact?product=multiple&plan=trial"
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-black font-medium rounded-full hover:bg-zinc-200 transition-all hover:scale-[1.02] active:scale-[0.98]"
                     >
-                      View Active Systems
+                      Start Free Trial
                     </Link>
                     <Link
-                      href="/about"
+                      href="/products"
                       className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-zinc-700 text-white font-medium rounded-full hover:bg-zinc-900 hover:border-zinc-600 transition-all"
                     >
-                      About Velayon
+                      View Products
                     </Link>
                   </motion.div>
                 </div>
@@ -129,61 +129,10 @@ export default function CompanySite() {
           </motion.div>
         </section>
 
-        {/* Social Demo Grid */}
+        {/* Production Systems - Shows all 4 products */}
         <div id="demos" className="w-full bg-black border-t border-zinc-900">
           <SocialDemoGrid />
         </div>
-
-        {/* Products Grid */}
-        <section id="products" className="py-[clamp(4rem,10vh,8rem)] px-[clamp(1rem,4vw,3rem)] bg-zinc-950">
-          <div className="max-w-6xl 2xl:max-w-7xl mx-auto">
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-4 mb-[clamp(2rem,5vw,4rem)]">
-              <div>
-                <span className="text-emerald-500 font-mono text-xs uppercase tracking-widest mb-2 block">Enterprise Suite</span>
-                <h2 className="text-headline">Deployed Infrastructure</h2>
-              </div>
-              <span className="text-zinc-500 font-mono text-sm">V.2026.1</span>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-[clamp(1rem,3vw,2rem)]">
-              {[
-                {
-                  name: "Attendify",
-                  badge: "SAAS",
-                  desc: "Geolocation-fenced attendance tracking system handling 10k+ concurrent requests.",
-                  tech: "Flutter • Firebase • Maps API",
-                  link: "https://attendify.velayon.com"
-                },
-                {
-                  name: "HMS Core",
-                  badge: "ERP",
-                  desc: "Full-stack hotel operations platform with multi-tenant billing and RBAC.",
-                  tech: "Next.js • Node • Prisma",
-                  link: null
-                }
-              ].map((product) => (
-                <div key={product.name} className="group border border-zinc-800 bg-zinc-900/20 p-[clamp(1.25rem,3vw,2rem)] rounded-2xl hover:border-zinc-700 hover:bg-zinc-900/40 transition-all">
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="w-12 h-12 rounded-lg bg-zinc-800/50 flex items-center justify-center group-hover:bg-emerald-500 group-hover:text-black transition-colors duration-300">
-                      <span className="text-xl">⌘</span>
-                    </div>
-                    <span className="text-xs font-mono text-zinc-500 border border-zinc-800 px-2 py-1 rounded bg-black">{product.badge}</span>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-3">{product.name}</h3>
-                  <p className="text-zinc-400 mb-6 leading-relaxed">{product.desc}</p>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-6 border-t border-zinc-800/50">
-                    <span className="text-xs font-mono text-zinc-500">{product.tech}</span>
-                    {product.link ? (
-                      <Link href={product.link} className="text-sm font-medium text-emerald-500 hover:text-emerald-400 flex items-center gap-1">Launch App <span>→</span></Link>
-                    ) : (
-                      <span className="text-xs text-zinc-600">Enterprise Access Only</span>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Footer */}
         <footer className="border-t border-[#1a1a1a] py-12 px-[clamp(1rem,4vw,3rem)] bg-[#050505]">
@@ -192,9 +141,9 @@ export default function CompanySite() {
               © 2026 VELAYON DYNAMICS. All rights reserved.
             </div>
             <div className="flex gap-6 text-sm font-mono text-zinc-400">
-              <Link href="#" className="hover:text-white transition-colors">LEGAL</Link>
-              <Link href="#" className="hover:text-white transition-colors">PRIVACY</Link>
-              <Link href="#" className="hover:text-white transition-colors">STATUS</Link>
+              <Link href="/about" className="hover:text-white transition-colors">ABOUT</Link>
+              <Link href="/pricing" className="hover:text-white transition-colors">PRICING</Link>
+              <Link href="/contact" className="hover:text-white transition-colors">CONTACT</Link>
             </div>
           </div>
         </footer>

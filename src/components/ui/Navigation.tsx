@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
     { href: "/work", label: "Work" },
@@ -12,6 +13,7 @@ const navLinks = [
 ];
 
 export function Navigation() {
+    const pathname = usePathname();
     const [scrollProgress, setScrollProgress] = useState(0);
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -42,8 +44,8 @@ export function Navigation() {
             {/* Navigation */}
             <motion.nav
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                        ? "bg-[#050505]/80 backdrop-blur-md border-b border-[#1A1A1A]"
-                        : "bg-transparent"
+                    ? "bg-[#050505]/80 backdrop-blur-md border-b border-[#1A1A1A]"
+                    : "bg-transparent"
                     }`}
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -66,15 +68,27 @@ export function Navigation() {
 
                         {/* Desktop Navigation */}
                         <div className="hidden md:flex items-center gap-8">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.href}
-                                    href={link.href}
-                                    className="text-sm text-[#A1A1AA] hover:text-white transition-colors duration-200"
-                                >
-                                    {link.label}
-                                </Link>
-                            ))}
+                            {navLinks.map((link) => {
+                                const isActive = pathname === link.href;
+                                return (
+                                    <Link
+                                        key={link.href}
+                                        href={link.href}
+                                        className="relative text-sm transition-colors duration-200 group"
+                                    >
+                                        <span className={`${isActive ? 'text-white' : 'text-[#A1A1AA] group-hover:text-white'}`}>
+                                            {link.label}
+                                        </span>
+                                        {isActive && (
+                                            <motion.div
+                                                className="absolute -bottom-1 left-0 right-0 h-[2px] bg-gradient-to-r from-[#F59E0B] to-[#F97316]"
+                                                layoutId="navbar-indicator"
+                                                transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                                            />
+                                        )}
+                                    </Link>
+                                );
+                            })}
 
                             {/* Status Indicator */}
                             <div className="flex items-center gap-2 pl-6 border-l border-[#2A2A2A]">
@@ -146,22 +160,34 @@ export function Navigation() {
                             transition={{ delay: 0.1 }}
                         >
                             <div className="flex flex-col gap-4">
-                                {navLinks.map((link, index) => (
-                                    <motion.div
-                                        key={link.href}
-                                        initial={{ x: -20, opacity: 0 }}
-                                        animate={{ x: 0, opacity: 1 }}
-                                        transition={{ delay: 0.1 + index * 0.05 }}
-                                    >
-                                        <Link
-                                            href={link.href}
-                                            className="block py-3 text-lg text-[#E5E5E5] hover:text-white border-b border-[#1A1A1A] transition-colors"
-                                            onClick={() => setIsMobileMenuOpen(false)}
+                                {navLinks.map((link, index) => {
+                                    const isActive = pathname === link.href;
+                                    return (
+                                        <motion.div
+                                            key={link.href}
+                                            initial={{ x: -20, opacity: 0 }}
+                                            animate={{ x: 0, opacity: 1 }}
+                                            transition={{ delay: 0.1 + index * 0.05 }}
                                         >
-                                            {link.label}
-                                        </Link>
-                                    </motion.div>
-                                ))}
+                                            <Link
+                                                href={link.href}
+                                                className="relative block py-3 text-lg border-b border-[#1A1A1A] transition-colors"
+                                                onClick={() => setIsMobileMenuOpen(false)}
+                                            >
+                                                <span className={`${isActive ? 'text-white' : 'text-[#E5E5E5]'}`}>
+                                                    {link.label}
+                                                </span>
+                                                {isActive && (
+                                                    <motion.div
+                                                        className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#F59E0B] to-[#F97316]"
+                                                        layoutId="mobile-navbar-indicator"
+                                                        transition={{ type: "spring", stiffness: 380, damping: 30 }}
+                                                    />
+                                                )}
+                                            </Link>
+                                        </motion.div>
+                                    );
+                                })}
 
                                 {/* Status Indicator - Mobile */}
                                 <motion.div
