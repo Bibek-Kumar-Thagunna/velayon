@@ -43,7 +43,7 @@ export default function FaceRecognitionPage() {
                             </div>
 
                             {/* Headline */}
-                            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+                            <h1 className="text-hero mb-6">
                                 {product.tagline}
                             </h1>
 
@@ -247,7 +247,7 @@ export default function FaceRecognitionPage() {
                         </p>
                         <div className="border border-zinc-800 bg-zinc-900/20 p-12 rounded-xl">
                             <div className="mb-8">
-                                <div className="text-5xl font-bold text-blue-500 mb-2">Custom Pricing</div>
+                                <div className="text-display text-blue-500 mb-2">Custom Pricing</div>
                                 <div className="text-zinc-400">Contact sales for a quote</div>
                             </div>
                             <ul className="space-y-3 text-left max-w-md mx-auto mb-8">
@@ -316,7 +316,7 @@ export default function FaceRecognitionPage() {
                 {/* Final CTA */}
                 <section className="py-24 px-6 bg-gradient-to-b from-zinc-950 to-black border-t border-zinc-900">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-5xl font-bold mb-6">
+                        <h2 className="text-display mb-6">
                             Secure Your Facilities with AI
                         </h2>
                         <p className="text-xl text-zinc-400 mb-8">

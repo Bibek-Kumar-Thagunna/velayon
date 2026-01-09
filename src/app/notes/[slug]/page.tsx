@@ -40,7 +40,7 @@ export default async function NotePage({
                         <span className="text-[#6B7280]">{note.date}</span>
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
+                    <h1 className="text-display text-white mb-8 leading-tight">
                         {note.title}
                     </h1>
 

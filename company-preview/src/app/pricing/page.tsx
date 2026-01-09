@@ -24,7 +24,7 @@ export default function PricingPage() {
                             <span className="text-emerald-500 font-mono text-xs uppercase tracking-widest mb-4 block">
                                 Transparent Pricing
                             </span>
-                            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                            <h1 className="text-hero mb-6">
                                 Built for Every Scale
                             </h1>
                             <p className="text-xl text-zinc-400 max-w-2xl mx-auto mb-8">

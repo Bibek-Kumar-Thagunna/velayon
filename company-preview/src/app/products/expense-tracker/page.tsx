@@ -45,7 +45,7 @@ export default function ExpenseTrackerPage() {
                             </div>
 
                             {/* Headline */}
-                            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+                            <h1 className="text-hero mb-6">
                                 Track Every Rupee,
                                 <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500">
@@ -303,7 +303,7 @@ export default function ExpenseTrackerPage() {
                 {/* Final CTA */}
                 <section className="py-24 px-6 bg-gradient-to-b from-zinc-950 to-black border-t border-zinc-900">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-5xl font-bold mb-6">
+                        <h2 className="text-display mb-6">
                             Stop Losing Track of Money
                         </h2>
                         <p className="text-xl text-zinc-400 mb-8">

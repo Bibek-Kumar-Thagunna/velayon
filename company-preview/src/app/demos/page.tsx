@@ -23,7 +23,7 @@ export default function DemosPage() {
                             <span className="text-emerald-500 font-mono text-xs uppercase tracking-widest mb-4 block">
                                 Product Demonstrations
                             </span>
-                            <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                            <h1 className="text-hero mb-6">
                                 See It in Action
                             </h1>
                             <p className="text-xl text-zinc-400 max-w-2xl mx-auto mb-8">

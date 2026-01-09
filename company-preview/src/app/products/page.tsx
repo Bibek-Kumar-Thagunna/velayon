@@ -23,7 +23,7 @@ export default function ProductsPage() {
                             <span className="text-emerald-500 font-mono text-xs uppercase tracking-widest mb-4 block">
                                 ENTERPRISE SOFTWARE SUITE
                             </span>
-                            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+                            <h1 className="text-hero mb-6">
                                 Production-Ready SaaS Platforms
                             </h1>
                             <p className="text-xl text-zinc-400 max-w-3xl mx-auto mb-12">
@@ -67,7 +67,7 @@ export default function ProductsPage() {
                                         </div>
 
                                         {/* Name & Tagline */}
-                                        <h2 className="text-4xl font-bold mb-4">{product.name}</h2>
+                                        <h2 className="text-headline mb-4">{product.name}</h2>
                                         <p className="text-xl text-zinc-400 mb-6">{product.tagline}</p>
                                         <p className="text-zinc-500 mb-8 leading-relaxed">{product.description}</p>
 

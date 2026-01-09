@@ -1,0 +1,14 @@
+//FIXED text-6xl md:text-7xl → text-hero
+//PRODUCTION-READY SAAS PLATFORMS
+className="text-hero mb-6"
+
+//FIXED text-4xl font-bold → text-headline  
+//ATTENDIFY, HMS CORE, etc (product names only)
+className="text-headline mb-4"
+
+//REPLACEMENT GUIDE:
+// - text-6xl md:text-7xl → text-hero (main page heroes)
+// - text-5xl md:text-7xl → text-hero (main page heroes)
+// - text-5xl font-bold → text-display (CTAs, important sections)
+// - text-4xl font-bold → text-headline (section headings)
+// - text-4xl (icons/emojis) → KEEP AS IS (decorative)

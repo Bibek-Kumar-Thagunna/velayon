@@ -30,7 +30,7 @@ export default function ContactPage() {
                             transition={{ duration: 0.6 }}
                         >
                             <span className="font-mono text-xs text-emerald-500 mb-4 block uppercase tracking-wider">GET IN TOUCH</span>
-                            <h1 className="text-5xl md:text-7xl font-bold mb-6">Let's Build Together</h1>
+                            <h1 className="text-hero mb-6">Let's Build Together</h1>
                             <p className="text-xl text-zinc-400 mb-12 max-w-2xl">
                                 Whether you're interested in our products, need enterprise support, or want to discuss a custom solution—we're here to help.
                             </p>

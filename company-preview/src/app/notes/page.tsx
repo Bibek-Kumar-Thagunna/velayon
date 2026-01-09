@@ -85,7 +85,7 @@ export default function NotesPage() {
                             <span className="font-mono text-xs tracking-[0.1em] uppercase text-[#F59E0B] block mb-4">
                                 &lt;BLOG & NOTES&gt;
                             </span>
-                            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+                            <h1 className="text-hero mb-6">
                                 Technical Insights
                             </h1>
                             <p className="text-xl text-[#A1A1AA] max-w-2xl">

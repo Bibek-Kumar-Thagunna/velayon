@@ -19,7 +19,7 @@ export default function AboutPage() {
                             transition={{ duration: 0.6 }}
                         >
                             <span className="font-mono text-xs text-emerald-500 mb-4 block uppercase tracking-wider">VELAYON DYNAMICS</span>
-                            <h1 className="text-5xl md:text-7xl font-bold mb-8">Building the Software Backbone of Tomorrow</h1>
+                            <h1 className="text-hero mb-8">Building the Software Backbone of Tomorrow</h1>
 
                             <div className="prose prose-invert prose-lg text-zinc-300 max-w-none space-y-6">
                                 <p className="text-2xl text-white leading-relaxed">

@@ -45,7 +45,7 @@ export default function HotelManagementPage() {
                             </div>
 
                             {/* Headline */}
-                            <h1 className="text-6xl md:text-7xl font-bold mb-6">
+                            <h1 className="text-hero mb-6">
                                 {product.tagline}
                             </h1>
 
@@ -349,7 +349,7 @@ export default function HotelManagementPage() {
                 {/* Final CTA */}
                 <section className="py-24 px-6 bg-gradient-to-b from-zinc-950 to-black border-t border-zinc-900">
                     <div className="max-w-4xl mx-auto text-center">
-                        <h2 className="text-5xl font-bold mb-6">
+                        <h2 className="text-display mb-6">
                             Transform Your Hotel Operations
                         </h2>
                         <p className="text-xl text-zinc-400 mb-8">
