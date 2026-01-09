@@ -1,0 +1,169 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Bibek Kumar Thagunna} \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ +91-7983183689 ~ 
+    \href{mailto:bibek@velayon.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{bibek@velayon.com}} ~ 
+    \href{https://bibek.velayon.com}{\raisebox{-0.2\height}\faGlobe\ \underline{bibek.velayon.com}} ~
+    \href{https://github.com/Bibek-Kumar-Thagunna}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/Bibek-Kumar-Thagunna}}
+    \vspace{-8pt}
+\end{center}
+
+%----------PROFESSIONAL SUMMARY----------
+\section{Professional Summary}
+\small{AI-Assisted Systems Engineer and Founder specializing in rapid prototyping and production deployment. Built 5 full-scale SaaS platforms (web, mobile, desktop) in 1 year using AI-accelerated workflows—all deployed and functional, available for testing at velayon.com. No active users or customers yet, but systems prove technical capability. Expert in system architecture, real-time data processing, and shipping MVPs in weeks. Seeking remote roles at AI-forward startups where velocity and pragmatism outweigh manual coding purity.}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Founder \& Lead Systems Engineer}{Jan 2024 -- Present}
+      {Velayon Dynamics}{Remote (Kathmandu, Nepal)}
+      \resumeItemListStart
+        \resumeItem{Architected and deployed 5 production-grade systems using AI-assisted development (Cursor, Replit Agent, Google Antigravity), reducing time-to-market by 10x compared to traditional development}
+        \resumeItem{Built \textbf{Attendify} (SaaS): QR + GPS attendance system with real-time analytics, anti-proxy detection, and Flutter mobile app. Fully deployed at attendify.velayon.com—no active users yet, but available for live testing}
+        \resumeItem{Engineered \textbf{HMS Core}: Multi-platform hotel management system (Next.js web, Flutter mobile/desktop) with Nepal tax compliance, billing, room management, and kitchen workflows. Complete system deployed across 5 platforms—ready for pilot customers}
+        \resumeItem{Developed \textbf{Face Recognition Dashboard}: Real-time CCTV-integrated system processing 30fps video streams with $<$100ms latency using OpenCV and ML pipelines. Proof-of-concept deployed and functional}
+        \resumeItem{Created \textbf{Expense Tracker}: Automated financial tracking via SMS parsing with 95\% accuracy using Hive (offline-first) and ML-based transaction categorization. Working demo available on GitHub}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------CORE COMPETENCIES-----------
+\section{Core Competencies}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{System Architecture}{: Multi-tier design, API architecture, database modeling, real-time systems, microservices} \\
+     \textbf{AI-Assisted Engineering}{: Cursor IDE, Replit Agent, Google Antigravity, GitHub Copilot (10x velocity workflows)} \\
+     \textbf{Technologies}{: Next.js, React, Flutter, Node.js, FastAPI, Supabase, Firebase, Prisma, PostgreSQL, Docker} \\
+     \textbf{Platforms}{: Web (Vercel, Netlify), Mobile (iOS/Android), Desktop (Windows/macOS/Linux), Cloud (GCP, AWS)} \\
+     \textbf{Specialized Skills}{: Real-time data processing, Face recognition (OpenCV), SMS/NLP parsing, Location-based systems} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------KEY PROJECTS-----------
+\section{Key Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Attendify} $|$ \emph{Flutter, Firebase, Node.js, QR/GPS Integration}}{2025 -- 2026}
+          \resumeItemListStart
+            \resumeItem{Smart attendance tracking with anti-proxy system: QR codes + GPS fencing to prevent location spoofing}
+            \resumeItem{Real-time analytics dashboard with session management, late detection, and teacher/admin role separation}
+            \resumeItem{Deployed and functional at \href{https://attendify.velayon.com}{\underline{attendify.velayon.com}}—no active users yet, but available for live testing and demos}
+          \resumeItemListEnd
+          \vspace{-13pt}
+      \resumeProjectHeading
+          {\textbf{Hotel Management System (HMS Core)} $|$ \emph{Next.js, Flutter, Prisma, Multi-platform}}{2025 -- 2026}
+          \resumeItemListStart
+            \resumeItem{Full-featured hotel operations platform: billing, room management, restaurant/kitchen workflows, Nepal tax compliance}
+            \resumeItem{Cross-platform deployment: Web, iOS, Android, Windows, macOS, Linux (single codebase for mobile/desktop)}
+            \resumeItem{Scalable for 5-star hotels and local lodges with modular architecture supporting custom feature sets}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+      \resumeProjectHeading
+          {\textbf{Face Recognition Dashboard} $|$ \emph{Python, OpenCV, FastAPI, Real-time Processing}}{2025 -- 2026}
+          \resumeItemListStart
+            \resumeItem{CCTV-integrated attendance system processing 30fps streams with multi-face detection and confidence scoring}
+            \resumeItem{Built logging system with FPS monitoring and real-time dashboard updates for security and attendance use cases}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Thapar Institute of Engineering and Technology}{2023 -- 2027 (Expected)}
+      {Bachelor of Engineering in Computer Science}{Patiala, India}
+  \resumeSubHeadingListEnd
+
+%-----------ADDITIONAL INFO-----------
+\section{Additional Information}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Availability}{: Open for remote full-time roles and contract work. Flexible schedule with 4-6 hour overlap with US time zones (EST/PST)} \\
+     \textbf{Rate Expectations}{: \$15-25/hour (contract), \$32k/year (full-time) -- negotiable based on project scope} \\
+     \textbf{Engineering Philosophy}{: Ship first, optimize later. Prioritize working software over perfect code. Leverage AI to build 10x faster without sacrificing production quality} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+\end{document}
