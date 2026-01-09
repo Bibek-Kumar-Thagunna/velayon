@@ -96,7 +96,7 @@ export function SocialDemoGrid() {
                                             >
                                                 {item.category}
                                             </div>
-                                            <h3 className="text-2xl font-bold text-white mb-3">{item.title}</h3>
+                                            <h3 className="text-lg md:text-xl font-bold text-white mb-3">{item.title}</h3>
                                             <p className="text-sm text-zinc-300 leading-relaxed mb-4">{item.description}</p>
                                         </div>
 
@@ -105,7 +105,7 @@ export function SocialDemoGrid() {
                                             {/* Metric */}
                                             <div className="mb-4 pb-4 border-b border-zinc-800">
                                                 <div
-                                                    className="text-2xl font-bold mb-1"
+                                                    className="text-lg md:text-xl font-bold mb-1"
                                                     style={{ color: item.color }}
                                                 >
                                                     {item.metric}

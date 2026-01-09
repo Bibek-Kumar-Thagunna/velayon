@@ -69,7 +69,7 @@ export default function AttendifyPage() {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: i * 0.1 }}
                                     >
-                                        <div className="text-2xl font-bold text-emerald-500">{stat.value}</div>
+                                        <div className="text-lg md:text-xl font-bold text-emerald-500">{stat.value}</div>
                                         <div className="text-xs text-zinc-500 uppercase tracking-wider">{stat.label}</div>
                                     </motion.div>
                                 ))}
@@ -213,7 +213,7 @@ export default function AttendifyPage() {
                                     transition={{ delay: i * 0.1 }}
                                 >
                                     <div className="flex-shrink-0 w-16 h-16 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center">
-                                        <span className="text-2xl font-bold text-emerald-500">{item.step}</span>
+                                        <span className="text-lg md:text-xl font-bold text-emerald-500">{item.step}</span>
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-semibold mb-2">{item.title}</h3>

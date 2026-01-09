@@ -69,7 +69,7 @@ export default function ExpenseTrackerPage() {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: i * 0.1 }}
                                     >
-                                        <div className="text-2xl font-bold text-amber-500">{stat.value}</div>
+                                        <div className="text-lg md:text-xl font-bold text-amber-500">{stat.value}</div>
                                         <div className="text-xs text-zinc-500 uppercase tracking-wider">{stat.label}</div>
                                     </motion.div>
                                 ))}
@@ -185,7 +185,7 @@ export default function ExpenseTrackerPage() {
                                     transition={{ delay: i * 0.1 }}
                                 >
                                     <div className="flex-shrink-0 w-16 h-16 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center">
-                                        <span className="text-2xl font-bold text-amber-500">{item.step}</span>
+                                        <span className="text-lg md:text-xl font-bold text-amber-500">{item.step}</span>
                                     </div>
                                     <div className="flex-1">
                                         <h3 className="text-2xl font-semibold mb-2">{item.title}</h3>

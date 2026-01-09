@@ -68,7 +68,7 @@ export default function ProductsPage() {
 
                                         {/* Name & Tagline */}
                                         <h2 className="text-headline mb-4">{product.name}</h2>
-                                        <p className="text-xl text-zinc-400 mb-6">{product.tagline}</p>
+                                        <p className="text-base md:text-lg text-zinc-400 mb-6">{product.tagline}</p>
                                         <p className="text-zinc-500 mb-8 leading-relaxed">{product.description}</p>
 
                                         {/* Key Stats */}
@@ -76,7 +76,7 @@ export default function ProductsPage() {
                                             {product.stats.slice(0, 4).map((stat, j) => (
                                                 <div key={j} className="bg-zinc-900/50 p-4 rounded-lg border border-zinc-800">
                                                     <div
-                                                        className="text-2xl font-bold mb-1"
+                                                        className="text-lg md:text-xl font-bold mb-1"
                                                         style={{ color: product.color }}
                                                     >
                                                         {stat.value}

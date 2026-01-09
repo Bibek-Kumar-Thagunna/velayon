@@ -63,7 +63,7 @@ export default function FaceRecognitionPage() {
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ delay: i * 0.1 }}
                                     >
-                                        <div className="text-2xl font-bold text-blue-500">{stat.value}</div>
+                                        <div className="text-lg md:text-xl font-bold text-blue-500">{stat.value}</div>
                                         <div className="text-xs text-zinc-500 uppercase tracking-wider">{stat.label}</div>
                                     </motion.div>
                                 ))}
