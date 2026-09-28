@@ -5,10 +5,11 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  { href: "/products", label: "Digital products" },
+  { href: "/products", label: "Digital Products" },
   { href: "/services/websites", label: "Websites" },
-  { href: "/services/apps", label: "Mobile apps" },
-  { href: "/#process", label: "How it works" },
+  { href: "/services/apps", label: "Mobile Apps" },
+  { href: "/#process", label: "How It Works" },
+  { href: "/#about", label: "About" },
 ];
 
 export function Navigation() {
@@ -31,11 +32,11 @@ export function Navigation() {
         <Link href="/" className="wordmark" aria-label="Velayon home"><span className="wordmark-mark" aria-hidden="true">V</span><span>VELAYON</span></Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navLinks.map((link) => <Link key={link.href} className={linkClass(link.href)} href={link.href}>{link.label}</Link>)}
-          <Link className="nav-cta" href="/contact">Discuss a project <span aria-hidden="true">↗</span></Link>
+          <Link className="nav-cta" href="/contact">Start a Project <span aria-hidden="true">→</span></Link>
         </nav>
         <button className="menu-button" type="button" aria-expanded={open} aria-label={open ? "Close navigation" : "Open navigation"} onClick={() => setOpen((value) => !value)}><span aria-hidden="true">{open ? "×" : "☰"}</span></button>
       </div>
-      {open && <nav className="mobile-nav" aria-label="Mobile navigation">{navLinks.map((link) => <Link key={link.href} className={linkClass(link.href)} href={link.href} onClick={() => setOpen(false)}>{link.label}</Link>)}<Link className="nav-cta" href="/contact" onClick={() => setOpen(false)}>Discuss a project ↗</Link></nav>}
+      {open && <nav className="mobile-nav" aria-label="Mobile navigation">{navLinks.map((link) => <Link key={link.href} className={linkClass(link.href)} href={link.href} onClick={() => setOpen(false)}>{link.label}</Link>)}<Link className="nav-cta" href="/contact" onClick={() => setOpen(false)}>Start a Project →</Link></nav>}
     </header>
   );
 }
