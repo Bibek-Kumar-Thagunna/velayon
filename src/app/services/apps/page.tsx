@@ -6,7 +6,7 @@ import { appCategories, appPackages, appTechnologies } from "@/lib/catalog";
 
 export const metadata: Metadata = {
   title: "Flutter, Expo & Android App Development Packages",
-  description: "Technology-led mobile app development using Flutter, React Native with Expo or native Android with Kotlin. App packages from USD 1,200.",
+  description: "Technology-led mobile app development using Flutter, React Native with Expo or native Android with Kotlin. App packages from USD 2,400.",
   alternates: { canonical: "/services/apps" },
 };
 
@@ -27,7 +27,7 @@ export default function AppsPage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
         <section className="page-hero dark">
           <div className="container page-hero-grid">
-            <div><p className="eyebrow light">Mobile app design & development</p><h1 className="serif">Built around the product,<br />not the framework.</h1><div className="page-hero-facts"><span>Packages from $1,200</span><span>Flutter · Expo · Kotlin</span><span>Android release included</span></div></div>
+            <div><p className="eyebrow light">Mobile app design & development</p><h1 className="serif">Built around the product,<br />not the framework.</h1><div className="page-hero-facts"><span>Packages from $2,400</span><span>Flutter · Expo · Kotlin</span><span>Android release included</span></div></div>
             <p className="page-hero-copy">First we choose the right technology for the app you need. Then we scope the screens, data and integrations around a category that matches the real customer journey.</p>
           </div>
         </section>

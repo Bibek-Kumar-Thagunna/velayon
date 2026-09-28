@@ -6,7 +6,7 @@ import { websitePackages } from "@/lib/catalog";
 
 export const metadata: Metadata = {
   title: "Website Design & Development Packages",
-  description: "Clearly scoped website packages for landing pages, service businesses, booking-led companies and online stores. Packages from USD 349.",
+  description: "Clearly scoped website packages for landing pages, service businesses, booking-led companies and online stores. Packages from USD 599.",
   alternates: { canonical: "/services/websites" },
 };
 
@@ -27,7 +27,7 @@ export default function WebsitesPage() {
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
         <section className="page-hero">
           <div className="container page-hero-grid">
-            <div><p className="eyebrow blue">Website design & development</p><h1 className="serif">A credible website,<br />properly scoped.</h1><div className="page-hero-facts"><span>Packages from $349</span><span>7 days to 6 weeks</span><span>Remote delivery worldwide</span></div></div>
+            <div><p className="eyebrow blue">Website design & development</p><h1 className="serif">A credible website,<br />properly scoped.</h1><div className="page-hero-facts"><span>Packages from $599</span><span>7 days to 6 weeks</span><span>Remote delivery worldwide</span></div></div>
             <p className="page-hero-copy">Choose a package by business need—not by a confusing pile of technical features. Every option includes responsive design, a performance review and a clean handover.</p>
           </div>
         </section>

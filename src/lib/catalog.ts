@@ -4,14 +4,14 @@ export const checkoutUrl =
 export const websitePackages = [
   {
     name: "Launch Page",
-    price: "$349",
+    price: "$599",
     timeline: "7–10 business days",
     fit: "A focused launch, campaign or professional profile.",
     features: ["One custom page, up to 7 sections", "Responsive design and contact form", "On-page SEO and analytics setup", "Performance and accessibility review", "One revision round"],
   },
   {
     name: "Business Website",
-    price: "$849",
+    price: "$1,499",
     timeline: "2–3 weeks",
     fit: "Service businesses that need a credible lead-generating presence.",
     featured: true,
@@ -19,14 +19,14 @@ export const websitePackages = [
   },
   {
     name: "Booking Website",
-    price: "$1,149",
+    price: "$2,199",
     timeline: "3–4 weeks",
     fit: "Consultants, clinics, studios and appointment-led services.",
     features: ["Up to 8 custom pages", "Booking or scheduling integration", "Payments and automated confirmations", "Editable services and availability", "Two revision rounds"],
   },
   {
     name: "Online Store",
-    price: "$1,499",
+    price: "$2,999",
     timeline: "4–6 weeks",
     fit: "A polished catalogue and checkout for a focused product range.",
     features: ["Store setup with up to 30 products", "Payments, shipping and tax configuration", "Product, cart and order flows", "Core ecommerce SEO", "Store handover and training"],
@@ -65,14 +65,14 @@ export const appCategories = [
 export const appPackages = [
   {
     name: "Utility MVP",
-    price: "$1,200",
+    price: "$2,400",
     timeline: "3–5 weeks",
     fit: "A focused tool with one clear job and a polished everyday experience.",
     features: ["Flutter or Expo", "Up to 7 core screens", "Local storage or one cloud service", "Responsive phone layouts", "Tested Android release build"],
   },
   {
     name: "Service & Booking App",
-    price: "$2,400",
+    price: "$4,800",
     timeline: "6–8 weeks",
     fit: "Customers can discover, book and manage a service from their phone.",
     featured: true,
@@ -80,14 +80,14 @@ export const appPackages = [
   },
   {
     name: "Commerce App",
-    price: "$3,400",
+    price: "$7,500",
     timeline: "8–10 weeks",
     fit: "A mobile storefront connected to an existing commerce backend.",
     features: ["Catalogue, search and product detail", "Cart, checkout and payment integration", "Customer profile and order history", "Push notifications", "Store-ready Android build"],
   },
   {
     name: "Operations App",
-    price: "$4,800",
+    price: "$9,500",
     timeline: "10–14 weeks",
     fit: "A structured internal tool for teams, data capture and workflows.",
     features: ["Role-based access", "Dashboards, forms and workflows", "API and backend integration", "Offline-aware data capture", "Deployment documentation"],
