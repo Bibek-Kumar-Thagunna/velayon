@@ -1,0 +1,9 @@
+import type { Metadata } from "next";
+import { Navigation } from "@/components/ui/Navigation";
+import { Footer } from "@/components/ui/Footer";
+
+export const metadata: Metadata = { title: "Privacy Policy", description: "How Velayon handles information submitted through velayon.com.", alternates: { canonical: "/privacy" } };
+
+export default function PrivacyPage() {
+  return <><Navigation /><main className="policy-page"><article className="container"><p className="eyebrow blue">Effective September 28, 2026</p><h1 className="serif">Privacy policy</h1><p>Velayon collects only the information you choose to send when contacting us or purchasing a product. The current enquiry form prepares an email in your own email application; it does not store the form contents on this website.</p><h2>Information we may receive</h2><p>Your name, email address, project details, billing information supplied through a payment provider, and messages required to deliver support or services.</p><h2>How information is used</h2><p>We use information to respond to enquiries, fulfil purchases, deliver contracted work, provide support, keep necessary business records and protect the security of our services.</p><h2>Service providers</h2><p>Hosting, analytics, email and payment providers may process limited information under their own policies. Velayon does not sell personal information.</p><h2>Retention and requests</h2><p>Information is retained only as long as reasonably needed for delivery, legal, tax and security purposes. To request access, correction or deletion, email <a href="mailto:contact@velayon.com">contact@velayon.com</a>.</p><h2>Updates</h2><p>This policy may be updated when website features or providers change. The effective date above identifies the current version.</p></article></main><Footer /></>;
+}

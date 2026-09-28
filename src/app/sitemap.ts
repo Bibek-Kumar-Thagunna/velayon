@@ -1,42 +1,17 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next";
+
+export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    return [
-        {
-            url: 'https://bibek.velayon.com',
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 1,
-        },
-        {
-            url: 'https://bibek.velayon.com/work',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.9,
-        },
-        {
-            url: 'https://bibek.velayon.com/notes',
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.8,
-        },
-        {
-            url: 'https://bibek.velayon.com/about',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.9,
-        },
-        {
-            url: 'https://bibek.velayon.com/contact',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.7,
-        },
-        {
-            url: 'https://bibek.velayon.com/resume',
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.8,
-        },
-    ]
+  const lastModified = new Date("2026-09-28");
+  return [
+    { url: "https://velayon.com", lastModified, changeFrequency: "weekly", priority: 1 },
+    { url: "https://velayon.com/products", lastModified, changeFrequency: "weekly", priority: 0.9 },
+    { url: "https://velayon.com/products/ai-product-photography-playbook", lastModified, changeFrequency: "monthly", priority: 0.9 },
+    { url: "https://velayon.com/services/websites", lastModified, changeFrequency: "monthly", priority: 0.9 },
+    { url: "https://velayon.com/services/apps", lastModified, changeFrequency: "monthly", priority: 0.9 },
+    { url: "https://velayon.com/contact", lastModified, changeFrequency: "monthly", priority: 0.7 },
+    { url: "https://velayon.com/privacy", lastModified, changeFrequency: "yearly", priority: 0.2 },
+    { url: "https://velayon.com/terms", lastModified, changeFrequency: "yearly", priority: 0.2 },
+  ];
 }

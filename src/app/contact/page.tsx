@@ -1,84 +1,31 @@
-"use client";
+import { Navigation } from "@/components/ui/Navigation";
+import { Footer } from "@/components/ui/Footer";
+import { ContactForm } from "@/components/ui/ContactForm";
 
-import { motion } from "framer-motion";
-import { GridBackground, Navigation, Footer } from "@/components";
-import { PersonalContactForm } from "@/components/ui/PersonalContactForm";
-
-export default function Contact() {
-    return (
-        <GridBackground>
-            <Navigation />
-
-            <main className="pt-32 pb-20 px-[clamp(1.25rem,8vw,4rem)]">
-                <div className="max-w-4xl mx-auto">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        className="mb-16"
-                    >
-                        <span className="section-label block mb-4">&lt;06.CONTACT&gt;</span>
-                        <h1 className="text-headline text-white mb-6">
-                            Let's Work Together
-                        </h1>
-                        <p className="text-xl text-[#A1A1AA] max-w-2xl">
-                            I'm currently available for remote contracts and consulting opportunities.
-                            If you have a complex system to build, I'd love to hear about it.
-                        </p>
-                    </motion.div>
-
-                    <div className="grid lg:grid-cols-[1fr_300px] gap-12 lg:gap-20">
-                        {/* Form Column */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.2 }}
-                        >
-                            <PersonalContactForm />
-                        </motion.div>
-
-                        {/* Sidebar Column */}
-                        <motion.div
-                            initial={{ opacity: 0, x: 20 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                            className="space-y-12"
-                        >
-                            <div>
-                                <h3 className="font-mono text-sm text-white/50 mb-4">EMAIL</h3>
-                                <a href="mailto:contact@velayon.com" className="text-white hover:text-white/80 transition-colors block">
-                                    contact@velayon.com
-                                </a>
-                            </div>
-
-                            <div>
-                                <h3 className="font-mono text-sm text-white/50 mb-4">SOCIALS</h3>
-                                <div className="flex flex-col gap-2">
-                                    <a href="https://github.com/Bibek-Kumar-Thagunna" target="_blank" rel="noopener noreferrer" className="text-[#A1A1AA] hover:text-white transition-colors">
-                                        GitHub ↗
-                                    </a>
-                                    <a href="https://linkedin.com/in/bibek-kumar-thagunna" target="_blank" rel="noopener noreferrer" className="text-[#A1A1AA] hover:text-white transition-colors">
-                                        LinkedIn ↗
-                                    </a>
-                                    <a href="https://x.com/bibek_thagunna" target="_blank" rel="noopener noreferrer" className="text-[#A1A1AA] hover:text-white transition-colors">
-                                        X (Twitter) ↗
-                                    </a>
-                                </div>
-                            </div>
-
-                            <div>
-                                <h3 className="font-mono text-sm text-white/50 mb-4">LOCATION</h3>
-                                <p className="text-[#A1A1AA]">
-                                    Kathmandu, Nepal<br />
-                                    (UTC+5:45)
-                                </p>
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
-            </main>
-
-            <Footer />
-        </GridBackground>
-    );
+export default function ContactPage() {
+  return (
+    <>
+      <Navigation />
+      <main>
+        <section className="page-hero">
+          <div className="container page-hero-grid">
+            <div><p className="eyebrow blue">Project enquiry</p><h1 className="serif">Tell us what the finished product needs to do.</h1></div>
+            <p className="page-hero-copy">A useful brief does not need to be technical. Describe the audience, the task and the outcome. We will identify the closest package and explain any additional scope clearly.</p>
+          </div>
+        </section>
+        <section className="section">
+          <div className="container contact-layout">
+            <aside className="contact-aside">
+              <div><p className="eyebrow blue">Before you send</p><h2 className="section-title serif" style={{fontSize: "2.7rem"}}>A few helpful details.</h2><p className="section-lead small">Share examples you like, essential features, your target launch window and anything the project must connect to.</p></div>
+              <div className="contact-detail"><span>Email</span><a href="mailto:contact@velayon.com">contact@velayon.com</a></div>
+              <div className="contact-detail"><span>Location</span><strong>Kathmandu, Nepal · Remote worldwide</strong></div>
+              <div className="contact-detail"><span>Typical reply</span><strong>Within two business days</strong></div>
+            </aside>
+            <ContactForm />
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
 }

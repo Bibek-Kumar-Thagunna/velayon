@@ -19,8 +19,7 @@ export function HeroSection() {
                     transition={{ duration: 0.6, delay: 0.2 }}
                 >
                     <span className="font-mono text-xs tracking-[0.1em] uppercase text-[#6B7280]">
-                        BIBEK KUMAR THAGUNNA
-                    </span>
+                        FOR FOUNDERS HITTING THE OPS WALL                    </span>
                 </motion.div>
 
                 {/* Main Headline - Responsive line breaks */}
@@ -32,17 +31,25 @@ export function HeroSection() {
                 >
                     {/* Mobile: Stack more aggressively */}
                     <span className="block sm:hidden">
-                        I build systems
+                        Replace Your
                         <br />
-                        with <span className="gradient-text">Agentic AI</span>
+                        <span className="gradient-text">Admin Hiring Plan</span>
+                        <br />
+                        with AI Systems
                     </span>
                     {/* Desktop: Original layout */}
                     <span className="hidden sm:block">
-                        I build production-grade
+                        Replace Your <span className="gradient-text">Admin Hiring Plan</span>
                         <br />
-                        systems with <span className="gradient-text">Agentic AI</span>
+                        with AI Systems
                     </span>
                 </motion.h1>
+
+                <p className="text-xl text-[#A1A1AA] mb-8 max-w-2xl">
+                    I build custom AI internal tools that run your operations. No SaaS lock-in.
+                    <br className="hidden sm:block" />
+                    No monthly fees. You own the code. <span className="text-white font-medium">Delivered in 14 days.</span>
+                </p>
 
                 {/* Availability & Timezone */}
                 <motion.div
@@ -53,26 +60,16 @@ export function HeroSection() {
                 >
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#22C55E]/10 border border-[#22C55E]/30 rounded-lg">
                         <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse" />
-                        <span className="text-sm font-medium text-[#22C55E]">Available for Immediate Start</span>
+                        <span className="text-sm font-medium text-[#22C55E]">Q1 Sprint Slots Available</span>
                     </div>
                     <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#0A0A0A] border border-[#2A2A2A] rounded-lg">
-                        <span className="text-sm text-[#A1A1AA]">🕐 UTC+5:45</span>
+                        <span className="text-sm text-[#A1A1AA]">Fixed $3k</span>
                         <span className="text-[#333333]">•</span>
-                        <span className="text-sm text-[#6B7280]">4-6hr US overlap</span>
+                        <span className="text-sm text-[#6B7280]">Ship in 14 Days</span>
                     </div>
                 </motion.div>
 
-                {/* Credential Line */}
-                <motion.div
-                    className="text-sm text-[#6B7280] font-mono mb-8"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: 0.45 }}
-                >
-                    <span className="text-[#A1A1AA]">Specialty:</span> AI-native systems architecture
-                    <span className="text-[#333333] mx-2">•</span>
-                    <span className="text-[#A1A1AA]">Seeking:</span> Remote contracts & full-time roles
-                </motion.div>
+
 
                 {/* CTAs */}
                 <motion.div
@@ -85,7 +82,7 @@ export function HeroSection() {
                         href="/contact"
                         className="btn-primary inline-block"
                     >
-                        Get in Touch
+                        Apply for System Sprint
                     </MagneticButton>
                     <MagneticButton
                         href="/resume.pdf"
@@ -125,18 +122,18 @@ export function HeroSection() {
                         <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm font-mono">
                             <div className="flex items-center gap-2">
                                 <span className="text-[#22C55E]">▸</span>
-                                <span className="text-[#E5E5E5]">5 deployed demos</span>
+                                <span className="text-[#E5E5E5]">2 Slots / Month</span>
                             </div>
                             <div className="hidden sm:block w-px h-4 bg-[#2A2A2A]" />
                             <div className="flex items-center gap-2">
                                 <span className="text-[#22C55E]">▸</span>
-                                <span className="text-[#E5E5E5]">AI-orchestrated</span>
+                                <span className="text-[#E5E5E5]">Fixed Price</span>
                             </div>
                             <div className="hidden sm:block w-px h-4 bg-[#2A2A2A]" />
                             <div className="flex items-center gap-2">
-                                <span className="text-[#E5E5E5]">2026</span>
+                                <span className="text-[#E5E5E5]">Code Ownership</span>
                                 <span className="text-[#6B7280]">•</span>
-                                <span className="text-[#A1A1AA]">Remote</span>
+                                <span className="text-[#A1A1AA]">No Monthly Fees</span>
                             </div>
                         </div>
                     </div>

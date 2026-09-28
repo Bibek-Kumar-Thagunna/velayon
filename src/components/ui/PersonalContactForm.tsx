@@ -8,7 +8,7 @@ export function PersonalContactForm() {
     const [formData, setFormData] = useState({
         name: "",
         email: "",
-        type: "contract",
+        type: "sprint",
         message: ""
     });
 
@@ -27,7 +27,7 @@ export function PersonalContactForm() {
                     access_key: "46b1b056-40da-4716-84d2-b7d7ab735073",
                     name: formData.name,
                     email: formData.email,
-                    subject: `New Opportunity: ${formData.type} - ${formData.name}`,
+                    subject: `Sprint Application: ${formData.type} - ${formData.name}`,
                     message: formData.message,
                     from_name: "Bibek's Portfolio",
                     botcheck: ""
@@ -82,17 +82,17 @@ export function PersonalContactForm() {
             </div>
 
             <div>
-                <label htmlFor="type" className="block text-sm font-mono text-zinc-400 mb-2">OPPORTUNITY TYPE</label>
+                <label htmlFor="type" className="block text-sm font-mono text-zinc-400 mb-2">INQUIRY TYPE</label>
                 <select
                     id="type"
                     value={formData.type}
                     onChange={(e) => setFormData(prev => ({ ...prev, type: e.target.value }))}
                     className="w-full px-4 py-3 bg-[#0A0A0A] border border-zinc-800 rounded-lg text-white focus:outline-none focus:border-white/20 transition-colors appearance-none"
                 >
-                    <option value="contract">Freelance / Contract</option>
-                    <option value="fulltime">Full-time Role</option>
+                    <option value="sprint">14-Day Sprint Application</option>
                     <option value="consulting">Technical Consulting</option>
-                    <option value="other">Just saying hi</option>
+                    <option value="fulltime">Full-time Opportunity</option>
+                    <option value="other">General Inquiry</option>
                 </select>
             </div>
 
@@ -105,7 +105,7 @@ export function PersonalContactForm() {
                     value={formData.message}
                     onChange={(e) => setFormData(prev => ({ ...prev, message: e.target.value }))}
                     className="w-full px-4 py-3 bg-[#0A0A0A] border border-zinc-800 rounded-lg text-white placeholder-zinc-600 focus:outline-none focus:border-white/20 transition-colors resize-none"
-                    placeholder="Tell me about the project..."
+                    placeholder="Describe your operational bottleneck or project requirements..."
                 />
             </div>
 

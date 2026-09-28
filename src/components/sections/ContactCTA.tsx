@@ -23,7 +23,7 @@ export function ContactCTA() {
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.5 }}
                 >
-                    &lt;06.CONNECT&gt;
+                    &lt;05.START_SPRINT&gt;
                 </motion.span>
 
                 {/* Simple CTA */}
@@ -35,31 +35,32 @@ export function ContactCTA() {
                 >
                     <div className="max-w-xl">
                         <h2 className="text-headline text-white mb-4">
-                            Let's Build Something
+                            Apply for a Sprint Slot
                         </h2>
-                        <p className="text-[#A1A1AA] mb-4">
-                            Looking for a systems engineer who can deliver complete solutions?
-                            I'm available for remote contracts and full-time opportunities.
+                        <p className="text-[#A1A1AA] mb-4 text-lg">
+                            I'm a solo engineer. I intentionally limit capacity to 2 sprints per month so I can over-deliver on quality.
+                            <br />
+                            <span className="text-white font-medium">Investment: $3,000 (fixed scope) • Timeline: 14 days</span>
                         </p>
                         <AvailabilityStatus
                             status="available"
-                            message="Open for remote work"
+                            message="Next sprint: February 2026"
                         />
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4">
                         <MagneticButton
-                            href="mailto:bibek@velayon.com?subject=Work Opportunity"
+                            href="mailto:bibek@velayon.com?subject=Application for System Sprint"
                             className="btn-primary inline-flex items-center justify-center gap-2"
                         >
-                            <span>📧</span>
-                            <span>Email Me</span>
+                            <span>🚀</span>
+                            <span>Apply Now</span>
                         </MagneticButton>
                         <Link
                             href="/contact"
                             className="btn-secondary inline-flex items-center justify-center gap-2 group"
                         >
-                            <span>View Full Details</span>
+                            <span>Read FAQ</span>
                             <span className="transition-transform group-hover:translate-x-1">→</span>
                         </Link>
                     </div>

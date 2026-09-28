@@ -17,7 +17,7 @@ export function ApproachSection() {
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{ duration: 0.5 }}
                 >
-                    &lt;03.APPROACH&gt;
+                    &lt;03.PROCESS&gt;
                 </motion.span>
 
                 {/* Headline */}
@@ -27,10 +27,12 @@ export function ApproachSection() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                    Not Manual Coding.
-                    <br />
-                    <span className="text-[#A1A1AA]">Systematic Architecture.</span>
+                    The 14-Day Internal Tool Sprint
                 </motion.h2>
+                <p className="text-[#A1A1AA] max-w-2xl text-lg">
+                    I don't bill by the hour. I don't drag projects out for months.<br />
+                    <b>We move from "Problem" to "Production" in 2 weeks fixed.</b>
+                </p>
 
                 {/* Flow Diagram */}
                 <motion.div
@@ -52,7 +54,7 @@ export function ApproachSection() {
                         >
                             {/* Problem Node */}
                             <rect x="40" y="40" width="100" height="50" rx="8" stroke="#333" strokeWidth="1" fill="#0A0A0A" />
-                            <text x="90" y="70" textAnchor="middle" fill="#E5E5E5" fontSize="14" fontFamily="monospace">Problem</text>
+                            <text x="90" y="70" textAnchor="middle" fill="#E5E5E5" fontSize="14" fontFamily="monospace">Audit</text>
                         </motion.g>
 
                         <motion.g
@@ -61,8 +63,8 @@ export function ApproachSection() {
                             transition={{ duration: 0.5, delay: 0.4 }}
                         >
                             {/* Design Node */}
-                            <rect x="250" y="40" width="100" height="50" rx="8" stroke="#333" strokeWidth="1" fill="#0A0A0A" />
-                            <text x="300" y="70" textAnchor="middle" fill="#E5E5E5" fontSize="14" fontFamily="monospace">Design</text>
+                            <rect x="250" y="40" width="100" height="50" rx="8" stroke="#F59E0B" strokeWidth="1" fill="#0A0A0A" />
+                            <text x="300" y="70" textAnchor="middle" fill="#F59E0B" fontSize="14" fontFamily="monospace">Week 1: Plan</text>
                         </motion.g>
 
                         <motion.g
@@ -72,7 +74,7 @@ export function ApproachSection() {
                         >
                             {/* Deploy Node */}
                             <rect x="460" y="40" width="100" height="50" rx="8" stroke="#22C55E" strokeWidth="1" fill="#0A0A0A" />
-                            <text x="510" y="70" textAnchor="middle" fill="#22C55E" fontSize="14" fontFamily="monospace">Deploy</text>
+                            <text x="510" y="70" textAnchor="middle" fill="#22C55E" fontSize="14" fontFamily="monospace">Week 2: Ship</text>
                         </motion.g>
 
                         {/* Connecting Lines */}
@@ -156,38 +158,38 @@ export function ApproachSection() {
                     animate={isInView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                    <div className="border-t border-[#2A2A2A] pt-6">
-                        <h3 className="font-mono text-sm text-[#6B7280] mb-4">Traditional Development</h3>
-                        <ul className="space-y-3 text-[#A1A1AA]">
+                    <div className="border-t border-[#F59E0B] pt-6">
+                        <h3 className="font-mono text-sm text-[#F59E0B] mb-4">Week 1: Audit & Architecture</h3>
+                        <ul className="space-y-3 text-[#E5E5E5]">
                             <li className="flex items-start gap-3">
-                                <span className="text-[#6B7280]">─</span>
-                                Weeks of implementation
+                                <span className="text-[#F59E0B]">▸</span>
+                                <span className="text-[#A1A1AA]">Deep-dive audit of your manual workflows.</span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <span className="text-[#6B7280]">─</span>
-                                Manual debugging
+                                <span className="text-[#F59E0B]">▸</span>
+                                <span className="text-[#A1A1AA]">I deliver a full Technical Specification.</span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <span className="text-[#6B7280]">─</span>
-                                Single-track execution
+                                <span className="text-[#F59E0B]">▸</span>
+                                <span className="text-[#A1A1AA]">We agree on the exact "Definition of Done".</span>
                             </li>
                         </ul>
                     </div>
 
                     <div className="border-t border-[#22C55E] pt-6">
-                        <h3 className="font-mono text-sm text-[#22C55E] mb-4">Agentic Development</h3>
+                        <h3 className="font-mono text-sm text-[#22C55E] mb-4">Week 2: Build & Deployment</h3>
                         <ul className="space-y-3 text-[#E5E5E5]">
                             <li className="flex items-start gap-3">
                                 <span className="text-[#22C55E]">▸</span>
-                                Hours of architecture
+                                <span className="text-[#E5E5E5]">I code and deploy the full system.</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-[#22C55E]">▸</span>
-                                Self-correcting systems
+                                <span className="text-[#E5E5E5]">You test it in production.</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-[#22C55E]">▸</span>
-                                Parallel exploration
+                                <span className="text-[#E5E5E5]">I hand over keys, repo, and docs. You own it.</span>
                             </li>
                         </ul>
                     </div>
