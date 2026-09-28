@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { MotionEffects } from "@/components/ui/MotionEffects";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://velayon.com"),
@@ -28,7 +29,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="en">
       <head><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} /></head>
-      <body><div className="site-shell">{children}</div></body>
+      <body><MotionEffects /><div className="site-shell">{children}</div></body>
     </html>
   );
 }

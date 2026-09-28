@@ -2,6 +2,14 @@ import Link from "next/link";
 
 export function Footer() {
   return (
+    <>
+    <section className="mountain-cta">
+      <div className="mountain-cta-shade" />
+      <div className="container mountain-cta-inner">
+        <div><p className="eyebrow light">Ready when you are</p><h2>Give the next idea a clear way forward.</h2></div>
+        <div><p>Choose a published package or tell us what needs to be different. We will make the scope, investment and next step easy to understand.</p><Link className="button button-primary" href="/contact">Start a conversation <span>↗</span></Link></div>
+      </div>
+    </section>
     <footer className="site-footer">
       <div className="container footer-grid">
         <div className="footer-brand">
@@ -14,6 +22,6 @@ export function Footer() {
         <div className="footer-links"><p>Information</p><a href="mailto:contact@velayon.com?subject=Velayon%20support">Product support</a><Link href="/terms">Terms of service</Link><Link href="/privacy">Privacy policy</Link></div>
       </div>
       <div className="container footer-bottom"><span>© {new Date().getFullYear()} Velayon</span><span>Designed and developed with care in Nepal.</span></div>
-    </footer>
+    </footer></>
   );
 }

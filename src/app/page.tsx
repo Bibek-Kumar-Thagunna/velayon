@@ -31,8 +31,8 @@ export default function Home() {
               <div className="trust-row"><span>Published pricing</span><span>Worldwide delivery</span><span>Scope agreed before work</span></div>
             </div>
             <div className="home-hero-art">
-              <Image src="/brand/velayon-hero-v2.webp" alt="Velayon creative products, websites and mobile application services" fill priority sizes="(max-width: 900px) 100vw, 52vw" />
-              <span className="hero-art-label"><b>VELAYON</b><small>Product · Design · Development</small></span>
+              <span className="hero-orbit orbit-one" /><span className="hero-orbit orbit-two" />
+              <Image src="/brand/velayon-hero-3d-v1.png" alt="3D presentation of Velayon digital products, website and mobile app development" fill priority sizes="(max-width: 900px) 100vw, 58vw" />
             </div>
           </div>
         </section>
@@ -69,17 +69,13 @@ export default function Home() {
         <section className="section process-section" id="process">
           <div className="container">
             <header className="section-intro compact"><div><p className="eyebrow">How it works</p><h2>Four visible steps. No mystery.</h2></div></header>
-            <div className="process-grid">{[
-              ["01", "Choose", "Pick a product or the package closest to your goal."],
-              ["02", "Confirm", "Review the deliverables and agree on the exact scope."],
-              ["03", "Build", "Follow progress through clear milestones and decisions."],
-              ["04", "Launch", "Receive the files or a tested, documented release."],
-            ].map(([number, title, copy]) => <article key={number}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
+            <div className="process-track">{[
+              ["01", "Choose", "Pick a product or the package closest to your goal.", "↗"],
+              ["02", "Shape", "Share the essential details and agree on the exact scope.", "◇"],
+              ["03", "Build", "Follow progress through visible milestones and decisions.", "✦"],
+              ["04", "Launch", "Receive the files or a tested, documented release.", "↑"],
+            ].map(([number, title, copy, icon]) => <article className="process-card" key={number}><div className="process-card-top"><span className="process-icon">{icon}</span><span className="process-number">{number}</span></div><h3>{title}</h3><p>{copy}</p></article>)}</div>
           </div>
-        </section>
-
-        <section className="closing-cta">
-          <div className="container closing-cta-grid"><div><p className="eyebrow light">Ready when you are</p><h2>Bring the next idea into focus.</h2></div><div><p>Choose a published package or tell us what needs to be different. We will make the path forward clear.</p><Link className="button button-primary" href="/contact">Start a conversation <span>↗</span></Link></div></div>
         </section>
       </main>
       <Footer />

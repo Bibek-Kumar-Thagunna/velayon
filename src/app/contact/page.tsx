@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/ui/Navigation";
 import { Footer } from "@/components/ui/Footer";
 import { ContactForm } from "@/components/ui/ContactForm";
+import { Suspense } from "react";
 
 export default function ContactPage() {
   return (
@@ -21,7 +22,7 @@ export default function ContactPage() {
               <div className="contact-detail"><span>Location</span><strong>Kathmandu, Nepal · Remote worldwide</strong></div>
               <div className="contact-detail"><span>Typical reply</span><strong>Within two business days</strong></div>
             </aside>
-            <ContactForm />
+            <Suspense fallback={<div className="contact-form form-loading">Loading secure form…</div>}><ContactForm /></Suspense>
           </div>
         </section>
       </main>
