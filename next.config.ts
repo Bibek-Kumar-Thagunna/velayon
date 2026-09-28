@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   output: "export",
   images: {
     unoptimized: true,
+    remotePatterns: [{ protocol: "https", hostname: "avatars.githubusercontent.com" }],
   },
   reactCompiler: true,
   // Exclude other project folders from TypeScript checking

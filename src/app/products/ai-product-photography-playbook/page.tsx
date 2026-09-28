@@ -4,81 +4,14 @@ import { Navigation } from "@/components/ui/Navigation";
 import { Footer } from "@/components/ui/Footer";
 import { checkoutUrl } from "@/lib/catalog";
 
-export const metadata: Metadata = {
-  title: "AI Product Photography Playbook — 48 Examples + 120 Workflows",
-  description: "An 84-page visual playbook with 48 AI product-photo examples, 120 editable workflows, correction prompts and a live prompt builder. USD 9.99.",
-  alternates: { canonical: "/products/ai-product-photography-playbook" },
-};
-
-const productSchema = {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  name: "The AI Product Photography Playbook",
-  description: "An 84-page visual playbook with 48 finished product-image examples, 120 commercial workflows, correction prompts and an editable prompt builder.",
-  image: "https://velayon.com/products/ai-product-photography-playbook/cover.png",
-  brand: { "@type": "Brand", name: "Velayon" },
-  offers: { "@type": "Offer", priceCurrency: "USD", price: "9.99", availability: "https://schema.org/InStock", url: "https://velayon.com/products/ai-product-photography-playbook" },
-};
+export const metadata: Metadata = { title: "AI Product Photography Playbook — 48 Examples + 120 Workflows", description: "An 84-page visual playbook with 48 AI product-photo examples, 120 editable workflows, correction prompts and a live prompt builder. USD 9.99.", alternates: { canonical: "/products/ai-product-photography-playbook" } };
+const schema = { "@context": "https://schema.org", "@type": "Product", name: "The AI Product Photography Playbook", image: "https://velayon.com/products/ai-product-photography-playbook/book-3d.png", brand: { "@type": "Brand", name: "Velayon" }, offers: { "@type": "Offer", priceCurrency: "USD", price: "9.99", availability: "https://schema.org/InStock" } };
 
 export default function ProductPage() {
-  return (
-    <>
-      <Navigation />
-      <main>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
-        <section className="product-detail-hero">
-          <div className="container product-detail-grid">
-            <div className="detail-cover"><Image src="/products/ai-product-photography-playbook/cover.png" alt="The AI Product Photography Playbook by Velayon" width={1200} height={1500} priority /></div>
-            <div className="detail-copy">
-              <p className="eyebrow light">A visual production system for better product images</p>
-              <h1 className="serif">Your product deserves more than another generic AI image.</h1>
-              <p>Use a repeatable system to create product-page heroes, lifestyle scenes, social ads, seasonal campaigns, food imagery, beauty visuals, fashion still lifes and digital-product mockups.</p>
-              <div className="price-lockup"><strong>$9.99</strong><span>One-time purchase · Single-business licence</span></div>
-              <div className="detail-actions"><a className="button-primary" href={checkoutUrl}>Get the complete playbook →</a><a className="button-secondary" href="#preview">Preview inside</a></div>
-              <p className="tiny-note">Purchase currently begins by email. You will receive secure payment and delivery instructions from contact@velayon.com.</p>
-            </div>
-          </div>
-        </section>
-
-        <section className="section" id="preview">
-          <div className="container">
-            <div className="section-heading split-heading"><div><p className="eyebrow blue">See before you buy</p><h2 className="section-title serif">The result and the method, side by side.</h2></div><p>This is not a random prompt dump. Each displayed result is paired with the stronger prompt structure used to create it and a focused correction prompt for common defects.</p></div>
-            <div className="preview-grid">
-              <figure className="preview-card large"><Image src="/products/ai-product-photography-playbook/results-overview.png" alt="Overview of AI product photography results across multiple categories" width={1800} height={1200} /><figcaption>48 visible results across 12 commercial categories.</figcaption></figure>
-              <figure className="preview-card"><Image src="/products/ai-product-photography-playbook/prompt-result-preview.png" alt="Prompt and product image result preview from the playbook" width={1200} height={900} /><figcaption>Stronger prompt beside the image it is designed to create.</figcaption></figure>
-              <figure className="preview-card"><Image src="/products/ai-product-photography-playbook/prompt-builder-preview.png" alt="Editable product photography prompt builder preview" width={1200} height={900} /><figcaption>Editable workbook that assembles a working brief from your choices.</figcaption></figure>
-            </div>
-          </div>
-        </section>
-
-        <section className="section services-section">
-          <div className="container">
-            <div className="section-heading"><p className="eyebrow blue">What you receive</p><h2 className="section-title serif">A complete working kit.</h2></div>
-            <div className="inside-grid">
-              {[
-                ["01", "84-page visual PDF", "Plain-language guidance for composition, lighting, materials, corrections and commercial review."],
-                ["02", "48 visible examples", "Finished product images across packshots, lifestyle, social, food, beauty, fashion, home and more."],
-                ["03", "120 workflows", "Searchable, editable commercial workflows for different categories, channels and campaign needs."],
-                ["04", "Live prompt builder", "Choose the product, scene, composition, light and constraints to assemble a stronger brief."],
-                ["05", "Correction prompts", "Repair one specific defect without needlessly redesigning the entire approved image."],
-                ["06", "Quick-start + scorecard", "Three-page production card, campaign recipes and a practical commercial quality-control check."],
-              ].map(([number, title, copy]) => <article className="inside-card" key={number}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>)}
-            </div>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="container licence-box">
-            <div><p className="eyebrow blue">Clear commercial use</p><h2 className="serif">Single Business Licence</h2></div>
-            <ul><li>Use the included workflows to create images for one business.</li><li>Edit and adapt the prompts for your own products and campaigns.</li><li>Use created images commercially subject to your image tool’s terms and the rights you hold.</li><li>The source files may not be resold, shared, sublicensed or uploaded as a competing product.</li></ul>
-          </div>
-        </section>
-
-        <section className="final-cta">
-          <div className="container final-cta-inner"><p className="eyebrow light">Ready to create with a system?</p><h2 className="serif">48 examples. 120 workflows.<br />One practical playbook.</h2><a className="button-primary" href={checkoutUrl}>Get it for $9.99 →</a></div>
-        </section>
-      </main>
-      <Footer />
-    </>
-  );
+  return <><Navigation /><main><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+    <section className="product-hero"><div className="container product-hero-grid"><div className="product-hero-book"><span /><Image src="/products/ai-product-photography-playbook/book-3d.png" alt="3D edition of The AI Product Photography Playbook" width={1103} height={1426} priority /></div><div className="product-hero-copy"><p className="eyebrow light">The complete visual prompt system</p><h1>Build product images that look ready to sell.</h1><p>Stop guessing at vague prompts. Start from a visible result, adapt the commercial workflow and use focused correction steps when the image needs work.</p><div className="product-proof"><span>84-page PDF</span><span>48 premium examples</span><span>120 editable workflows</span><span>Prompt-builder workbook</span></div><div className="purchase-row"><strong>$9.99</strong><small>One-time purchase<br />Single-business licence</small></div><div className="action-row"><a className="button button-primary" href={checkoutUrl}>Get instant access <span>↗</span></a><a className="button button-ghost" href="#preview">Preview inside</a></div><p className="microcopy">Checkout currently starts by email. You will receive secure payment and delivery instructions from contact@velayon.com.</p></div></div></section>
+    <section className="section" id="preview"><div className="container"><header className="section-intro"><div><p className="eyebrow">See before you buy</p><h2>Result, prompt and repair step—together.</h2></div><p>The page design keeps the target image beside the production brief, so you can understand what each prompt is meant to achieve.</p></header><div className="preview-grid"><figure className="preview-wide"><div><Image src="/products/ai-product-photography-playbook/results-overview.png" alt="Twelve commercial product image results from the playbook" fill priority sizes="(max-width: 800px) 100vw, 66vw" /></div><figcaption><span>Results library</span>48 visual examples across twelve useful product categories.</figcaption></figure><figure><div><Image src="/products/ai-product-photography-playbook/prompt-result-preview.png" alt="Prompt and result paired inside the playbook" fill loading="eager" sizes="(max-width: 800px) 100vw, 33vw" /></div><figcaption><span>Working pages</span>Prompt structure beside the result it is designed to create.</figcaption></figure><figure><div><Image src="/products/ai-product-photography-playbook/prompt-builder-preview.png" alt="Editable product photography prompt builder" fill loading="eager" sizes="(max-width: 800px) 100vw, 33vw" /></div><figcaption><span>Editable builder</span>Assemble a new brief from product, scene, light and constraints.</figcaption></figure></div></div></section>
+    <section className="section soft-section"><div className="container"><header className="section-intro compact"><div><p className="eyebrow">What you receive</p><h2>A complete production kit.</h2></div></header><div className="deliverable-grid">{[["01", "Visual playbook", "84 pages covering composition, lighting, material realism and commercial review."], ["02", "Results library", "48 examples spanning packshots, social, food, beauty, fashion, home and more."], ["03", "Workflow library", "120 searchable prompts for categories, placements and campaign needs."], ["04", "Prompt builder", "An editable workbook for constructing consistent production briefs."], ["05", "Correction system", "Targeted repair prompts that preserve the parts of the image already working."], ["06", "Quality control", "Quick-start guidance, campaign recipes and a commercial review scorecard."]].map(([n,t,c]) => <article key={n}><span>{n}</span><h3>{t}</h3><p>{c}</p></article>)}</div></div></section>
+    <section className="licence-section"><div className="container licence-grid"><div><p className="eyebrow light">Clear commercial use</p><h2>Use it to create for one business.</h2></div><div><ul><li>Adapt every workflow to your own products and campaigns.</li><li>Use generated images commercially, subject to your image tool and underlying rights.</li><li>Keep the playbook, workbook and source files inside your licensed business.</li></ul><a className="button button-primary" href={checkoutUrl}>Buy the playbook for $9.99 <span>↗</span></a></div></div></section>
+  </main><Footer /></>;
 }

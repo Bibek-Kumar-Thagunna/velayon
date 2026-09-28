@@ -1,66 +1,19 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Navigation } from "@/components/ui/Navigation";
 import { Footer } from "@/components/ui/Footer";
 import { appCategories, appPackages, appTechnologies } from "@/lib/catalog";
 
-export const metadata: Metadata = {
-  title: "Flutter, Expo & Android App Development Packages",
-  description: "Technology-led mobile app development using Flutter, React Native with Expo or native Android with Kotlin. App packages from USD 2,400.",
-  alternates: { canonical: "/services/apps" },
-};
-
-const serviceSchema = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  name: "Mobile App Design and Development",
-  provider: { "@type": "Organization", name: "Velayon", url: "https://velayon.com" },
-  areaServed: "Worldwide",
-  serviceType: ["Flutter development", "React Native and Expo development", "Native Android Kotlin development"],
-};
+export const metadata: Metadata = { title: "Flutter, Expo & Android App Development Packages", description: "Technology-led mobile app development using Flutter, React Native with Expo or native Android with Kotlin. App packages from USD 2,400.", alternates: { canonical: "/services/apps" } };
+const schema = { "@context": "https://schema.org", "@type": "Service", name: "Mobile App Design and Development", provider: { "@type": "Organization", name: "Velayon" }, areaServed: "Worldwide" };
 
 export default function AppsPage() {
-  return (
-    <>
-      <Navigation />
-      <main>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
-        <section className="page-hero dark">
-          <div className="container page-hero-grid">
-            <div><p className="eyebrow light">Mobile app design & development</p><h1 className="serif">Built around the product,<br />not the framework.</h1><div className="page-hero-facts"><span>Packages from $2,400</span><span>Flutter · Expo · Kotlin</span><span>Android release included</span></div></div>
-            <p className="page-hero-copy">First we choose the right technology for the app you need. Then we scope the screens, data and integrations around a category that matches the real customer journey.</p>
-          </div>
-        </section>
-
-        <section className="section">
-          <div className="container technology-grid" style={{color: "var(--ink)"}}>
-            <div className="technology-intro"><p className="eyebrow blue">01 · Choose the technology</p><h2 className="section-title serif">Three sensible paths.</h2><p style={{color: "#5d677e"}}>The recommendation depends on platform reach, hardware needs, release speed, existing systems and long-term maintenance.</p></div>
-            <div className="technology-list" style={{borderColor: "var(--line)"}}>
-              {appTechnologies.map((tech, index) => <article className="technology-row" style={{borderColor: "var(--line)"}} key={tech.name}><span className="tech-number" style={{borderColor: "#aab0c1", color: "#626b82"}}>0{index + 1}</span><div><p className="tech-label">{tech.label}</p><h3>{tech.name}</h3><p style={{color: "#5d677e"}}>{tech.summary}</p><small style={{color: "#7b8499"}}>Best for: {tech.bestFor}</small></div></article>)}
-            </div>
-          </div>
-        </section>
-
-        <section className="section technology-section">
-          <div className="container">
-            <div className="section-heading split-heading"><div><p className="eyebrow light">02 · Choose the app category</p><h2 className="section-title serif">Start with what users need to do.</h2></div><p style={{color: "#aab4d0"}}>Categories keep the first conversation practical. They make it easier to identify the core screens, data model and integrations your release actually needs.</p></div>
-            <div className="category-grid">{appCategories.map((item) => <article className="category-card" key={item.name}><span>{item.icon}</span><h3>{item.name}</h3><p>{item.examples}</p></article>)}</div>
-          </div>
-        </section>
-
-        <section className="section services-section">
-          <div className="container">
-            <div className="section-heading split-heading"><div><p className="eyebrow blue">03 · Select the closest package</p><h2 className="section-title serif">A defined first release.</h2></div><p>Each price covers the listed scope. Native iOS development, custom backend infrastructure, paid services, specialist hardware integration and store fees are estimated separately when needed.</p></div>
-            <div className="package-grid">
-              {appPackages.map((item) => <article className={`package-card ${item.featured ? "featured" : ""}`} key={item.name}>{item.featured && <span className="package-ribbon">Popular first release</span>}<h2>{item.name}</h2><p className="fit">{item.fit}</p><ul>{item.features.map((feature) => <li key={feature}>{feature}</li>)}</ul><div className="package-price-row"><strong>{item.price}</strong><span>Typical delivery<br />{item.timeline}</span></div><Link className="button-primary" href={`/contact?project=${encodeURIComponent(item.name)}`}>Ask about this package →</Link></article>)}
-            </div>
-            <div className="scope-note"><strong>Important scope note</strong><p>These packages assume a defined first release and either local data, an existing service or a conventional managed backend. We quote custom backend systems, complex realtime features and regulated-data requirements separately.</p></div>
-          </div>
-        </section>
-
-        <section className="final-cta"><div className="container final-cta-inner"><p className="eyebrow light">Have an app concept?</p><h2 className="serif">Turn the idea into a<br />clear first release.</h2><Link className="button-primary" href="/contact">Discuss your mobile app →</Link></div></section>
-      </main>
-      <Footer />
-    </>
-  );
+  return <><Navigation /><main><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+    <section className="service-hero app-hero"><div className="container service-hero-grid"><div className="service-hero-copy"><p className="eyebrow light">Mobile app design & development</p><h1>A focused first release, built on the right stack.</h1><p>Choose the technology for the product you actually need, then define the screens, data and integrations around a clear user journey.</p><div className="service-facts"><span><b>From $2,400</b> published packages</span><span><b>Flutter · Expo · Kotlin</b> technology paths</span><span><b>Android release</b> included in every package</span></div><Link className="button button-primary" href="#packages">Compare mobile packages <span>↓</span></Link></div><div className="service-hero-media app-media"><Image src="/brand/mobile-app-packages-v2.webp" alt="Velayon app interfaces displayed across modern phones" fill priority sizes="(max-width: 900px) 100vw, 48vw" /></div></div></section>
+    <section className="section"><div className="container"><header className="section-intro"><div><p className="eyebrow">01 · Choose the technology</p><h2>Three sensible paths.</h2></div><p>The recommendation depends on platform reach, hardware access, release speed, existing systems and long-term maintenance.</p></header><div className="tech-grid">{appTechnologies.map((item, i) => <article key={item.name}><span>0{i+1}</span><p>{item.label}</p><h3>{item.name}</h3><p>{item.summary}</p><small>Best for: {item.bestFor}</small></article>)}</div></div></section>
+    <section className="section soft-section"><div className="container"><header className="section-intro"><div><p className="eyebrow">02 · Choose the product category</p><h2>Start with what users need to do.</h2></div><p>Categories make the first conversation practical. They reveal the screens, data model and connections the first release actually needs.</p></header><div className="category-grid">{appCategories.map((item) => <article key={item.name}><span>{item.icon}</span><h3>{item.name}</h3><p>{item.examples}</p></article>)}</div></div></section>
+    <section className="section" id="packages"><div className="container"><header className="section-intro"><div><p className="eyebrow">03 · Select the closest package</p><h2>A defined first release.</h2></div><p>Store fees, paid services, custom backend infrastructure, native iOS work and specialist hardware connections are scoped separately when required.</p></header><div className="package-grid">{appPackages.map((item, index) => <article className={`service-card ${item.featured ? "featured" : ""}`} key={item.name}>{item.featured && <span className="service-badge">Popular first release</span>}<p className="card-number">0{index + 1}</p><h3>{item.name}</h3><p className="service-fit">{item.fit}</p><div className="service-price"><strong>{item.price}</strong><span>{item.timeline}</span></div><ul>{item.features.map((feature) => <li key={feature}>{feature}</li>)}</ul><Link className="button button-outline" href={`/contact?project=${encodeURIComponent(item.name)}`}>Discuss this package <span>↗</span></Link></article>)}</div><div className="scope-bar"><strong>Important scope note</strong><p>Published packages assume a focused first release and either local data, an existing service or a conventional managed backend.</p><Link href="/contact">Check your app scope ↗</Link></div></div></section>
+    <section className="closing-cta"><div className="container closing-cta-grid"><div><p className="eyebrow light">Have an app concept?</p><h2>Turn it into a release people can actually use.</h2></div><div><p>Describe the user, the main task and any systems the app must connect to.</p><Link className="button button-primary" href="/contact">Discuss your mobile app <span>↗</span></Link></div></div></section>
+  </main><Footer /></>;
 }

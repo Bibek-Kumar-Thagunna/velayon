@@ -1,0 +1,16 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
+import { Navigation } from "@/components/ui/Navigation";
+import { Footer } from "@/components/ui/Footer";
+
+export const metadata: Metadata = { title: "About Velayon", description: "Meet Velayon and founder Bibek Kumar Thagunna—a Nepal-based digital studio creating practical products, websites and mobile applications.", alternates: { canonical: "/about" } };
+
+export default function AboutPage() {
+  return <><Navigation /><main>
+    <section className="about-hero"><div className="container about-hero-inner"><p className="eyebrow light">About Velayon</p><h1>A small studio with a practical point of view.</h1><p>Velayon creates useful digital products and clearly scoped development work for people who want to move from an idea to something real.</p></div></section>
+    <section className="section founder-section"><div className="container founder-grid"><div className="founder-portrait-wrap"><div className="founder-portrait"><Image src="https://avatars.githubusercontent.com/u/223251507?v=4&size=720" alt="Bibek Kumar Thagunna, founder of Velayon" width={720} height={720} /></div><span>Founder · Designer · Developer</span></div><div className="founder-copy"><p className="eyebrow">Meet the founder</p><h2>Bibek Kumar Thagunna</h2><p className="founder-lead">I started Velayon to make digital work easier to understand and easier to buy.</p><p>That means products with real previews, service packages with visible deliverables and development conversations focused on the result—not a wall of technical language.</p><p>From Nepal, I work with customers remotely to design and build focused websites, Flutter and Expo apps, native Android products and practical creative systems.</p><div className="founder-links"><a href="https://github.com/Bibek-Kumar-Thagunna" target="_blank" rel="noreferrer">GitHub ↗</a><a href="mailto:contact@velayon.com">contact@velayon.com ↗</a></div></div></div></section>
+    <section className="section soft-section"><div className="container"><header className="section-intro compact"><div><p className="eyebrow">The Velayon standard</p><h2>What the work should feel like.</h2></div></header><div className="principle-grid">{[["01","Clear before clever","The scope, price and next action should be understandable without a sales call."],["02","Useful before decorative","Design decisions must support trust, comprehension and the task a customer came to complete."],["03","Focused before oversized","A smaller release that works is more valuable than a long feature list that never launches."],["04","Owned by the customer","Files, documentation and handover should leave the customer in control of what was built."]].map(([n,t,c]) => <article key={n}><span>{n}</span><h3>{t}</h3><p>{c}</p></article>)}</div></div></section>
+    <section className="closing-cta"><div className="container closing-cta-grid"><div><p className="eyebrow light">Build with Velayon</p><h2>Have a useful idea worth making?</h2></div><div><p>Tell Bibek what the finished product should help someone do.</p><Link className="button button-primary" href="/contact">Start a conversation <span>↗</span></Link></div></div></section>
+  </main><Footer /></>;
+}
