@@ -70,7 +70,19 @@ See [deployment guide](https://vercel.com/docs/deployments) for details.
 
 ## Environment Variables
 
-No environment variables required for basic deployment.
+The site works without payment variables and falls back to the purchase-request
+form. To enable Paddle Checkout, copy `.env.example` to `.env.local` and set:
+
+```bash
+NEXT_PUBLIC_PADDLE_ENV=sandbox
+NEXT_PUBLIC_PADDLE_CLIENT_TOKEN=test_your_client_side_token
+NEXT_PUBLIC_PADDLE_PRICE_ID=pri_your_sandbox_price_id
+```
+
+Use only a Paddle **client-side token** in `NEXT_PUBLIC_PADDLE_CLIENT_TOKEN`.
+Never expose a Paddle API key. When moving to Live, replace the Sandbox price
+and token with the separately created Live values and set
+`NEXT_PUBLIC_PADDLE_ENV=production`.
 
 ## Performance
 

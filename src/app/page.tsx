@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navigation } from "@/components/ui/Navigation";
 import { Footer } from "@/components/ui/Footer";
-import { checkoutUrl } from "@/lib/catalog";
 
 const paths = [
   { number: "01", title: "Digital products", copy: "Practical guides and working systems made for immediate use.", action: "Shop products", href: "/products", image: "/products/ai-product-photography-playbook/book-3d.webp", alt: "3D edition of the AI Product Photography Playbook", mode: "contain" },
@@ -53,7 +52,7 @@ export default function Home() {
             <div className="book-stage"><div className="book-aura" /><Image src="/products/ai-product-photography-playbook/book-3d.webp" alt="3D hardcover presentation of The AI Product Photography Playbook" width={1103} height={1426} sizes="(max-width: 760px) 85vw, 440px" /></div>
             <div className="product-feature-copy"><p className="eyebrow light">Featured digital product · $9.99</p><h2>The product-photo system that shows its work.</h2><p className="feature-lead">The AI Product Photography Playbook pairs every prompt structure with the result it is designed to create—then gives you focused corrections when the first image is not quite right.</p>
               <div className="feature-facts"><span><b>120</b> editable workflows</span><span><b>48</b> premium visual examples</span><span><b>12</b> commercial categories</span></div>
-              <div className="action-row"><a className="button button-primary" href={checkoutUrl}>Request the playbook for $9.99 <span>↗</span></a><Link className="text-link light-link" href="/products/ai-product-photography-playbook">See what is included</Link></div>
+              <div className="action-row"><Link className="button button-primary" href="/products/ai-product-photography-playbook">Buy the playbook for $9.99 <span>↗</span></Link><Link className="text-link light-link" href="/products/ai-product-photography-playbook#preview">See what is included</Link></div>
             </div>
           </div>
         </section>
