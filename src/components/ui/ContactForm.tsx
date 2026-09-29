@@ -3,7 +3,8 @@
 import { FormEvent, useState } from "react";
 import { useSearchParams } from "next/navigation";
 
-const projectOptions = ["Launch Page", "Business Website", "Booking Website", "Online Store", "Utility MVP", "Service & Booking App", "Commerce App", "Operations App", "Digital product enquiry", "Product support", "Something else"];
+const productPurchaseRequest = "AI Product Photography Playbook purchase request";
+const projectOptions = ["Launch Page", "Business Website", "Booking Website", "Online Store", "Utility MVP", "Service & Booking App", "Commerce App", "Operations App", productPurchaseRequest, "Digital product enquiry", "Product support", "Something else"];
 const appProjects = new Set(["Utility MVP", "Service & Booking App", "Commerce App", "Operations App"]);
 const projectBudgets: Record<string, string> = {
   "Launch Page": "$500–$1,500",
@@ -14,6 +15,7 @@ const projectBudgets: Record<string, string> = {
   "Service & Booking App": "$2,500–$5,000",
   "Commerce App": "$5,000–$10,000",
   "Operations App": "$5,000–$10,000",
+  [productPurchaseRequest]: "$9.99 one-time purchase",
   "Digital product enquiry": "Under $500",
   "Product support": "Not applicable",
   "Something else": "Not decided yet",
@@ -31,6 +33,7 @@ export function ContactForm() {
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const isApp = appProjects.has(formData.project);
+  const isProductPurchase = formData.project === productPurchaseRequest;
 
   function update(field: keyof typeof formData, value: string) {
     setFormData((current) => ({ ...current, [field]: value }));
@@ -95,11 +98,11 @@ export function ContactForm() {
       </div>}
 
       <div className="field-grid">
-        <label><span>Planned investment</span><select value={formData.budget} onChange={(e) => update("budget", e.target.value)}><option>Not applicable</option><option>Under $500</option><option>$500–$1,500</option><option>$1,500–$2,500</option><option>$2,500–$5,000</option><option>$5,000–$10,000</option><option>$10,000+</option><option>Not decided yet</option></select></label>
+        <label><span>{isProductPurchase ? "Product price" : "Planned investment"}</span><select value={formData.budget} onChange={(e) => update("budget", e.target.value)} disabled={isProductPurchase}><option>$9.99 one-time purchase</option><option>Not applicable</option><option>Under $500</option><option>$500–$1,500</option><option>$1,500–$2,500</option><option>$2,500–$5,000</option><option>$5,000–$10,000</option><option>$10,000+</option><option>Not decided yet</option></select></label>
         <label><span>Preferred timeline</span><select value={formData.timeline} onChange={(e) => update("timeline", e.target.value)}><option>As soon as practical</option><option>Within one month</option><option>1–3 months</option><option>3+ months</option><option>Flexible</option></select></label>
       </div>
-      <label><span>What should the finished product help someone do? *</span><textarea value={formData.details} onChange={(e) => update("details", e.target.value)} required rows={7} placeholder="Describe the customer, the main task, must-have features and any examples you like." /></label>
-      <button className="button button-primary form-submit" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : "Send message"}<span aria-hidden="true">↗</span></button>
+      <label><span>{isProductPurchase ? "Purchase request note (optional)" : "What should the finished product help someone do? *"}</span><textarea value={formData.details} onChange={(e) => update("details", e.target.value)} required={!isProductPurchase} rows={7} placeholder={isProductPurchase ? "Add any question about the playbook or licence." : "Describe the customer, the main task, must-have features and any examples you like."} /></label>
+      <button className="button button-primary form-submit" type="submit" disabled={status === "sending"}>{status === "sending" ? "Sending…" : isProductPurchase ? "Request purchase access" : "Send message"}<span aria-hidden="true">↗</span></button>
       <p className={`form-status ${status}`} role="status">{status === "success" ? "Message sent successfully. We’ll reply within one business day." : status === "error" ? "The message could not be sent. Please retry or return to this page shortly." : "Your message is sent securely to Velayon Dynamics. No email application will open."}</p>
     </form>
   );

@@ -1,4 +1,4 @@
-export const checkoutUrl = "/contact?project=Digital%20product%20enquiry";
+export const checkoutUrl = "/contact?project=AI%20Product%20Photography%20Playbook%20purchase%20request";
 
 export const websitePackages = [
   {
