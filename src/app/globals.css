@@ -1,9 +1,9 @@
-@font-face{font-family:"Clear Sans";src:url("/fonts/ClearSans-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:"Clear Sans";src:url("/fonts/ClearSans-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:"Clear Sans";src:url("/fonts/ClearSans-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:"Noto Sans Display";src:url("/fonts/NotoSansDisplay-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:"Noto Sans Display";src:url("/fonts/NotoSansDisplay-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
-@font-face{font-family:"Noto Sans Display";src:url("/fonts/NotoSansDisplay-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Clear Sans";src:url("/fonts/ClearSans-Regular.woff2") format("woff2"),url("/fonts/ClearSans-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Clear Sans";src:url("/fonts/ClearSans-Medium.woff2") format("woff2"),url("/fonts/ClearSans-Medium.ttf") format("truetype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Clear Sans";src:url("/fonts/ClearSans-Bold.woff2") format("woff2"),url("/fonts/ClearSans-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Noto Sans Display";src:url("/fonts/NotoSansDisplay-Regular.woff2") format("woff2"),url("/fonts/NotoSansDisplay-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Noto Sans Display";src:url("/fonts/NotoSansDisplay-SemiBold.woff2") format("woff2"),url("/fonts/NotoSansDisplay-SemiBold.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"Noto Sans Display";src:url("/fonts/NotoSansDisplay-Bold.woff2") format("woff2"),url("/fonts/NotoSansDisplay-Bold.ttf") format("truetype");font-weight:700;font-style:normal;font-display:swap}
 
 :root{--navy:#06152f;--navy-2:#0a2147;--ink:#101b33;--blue:#1769ff;--blue-dark:#0d4ed4;--paper:#f5f3ee;--white:#fff;--muted:#657085;--line:#dcdedc;--soft:#ebece8;--radius:18px;--shadow:0 24px 70px rgba(13,27,54,.10)}
 *{box-sizing:border-box}
@@ -176,7 +176,7 @@ p{margin:0}
 .process-number{font-size:.72rem;color:#8a96aa;font-weight:700;letter-spacing:.12em}
 .process-card h3{margin:44px 0 12px;font-size:1.55rem}.process-card p{color:var(--muted);line-height:1.7}
 
-.mountain-cta{position:relative;min-height:410px;display:flex;align-items:center;color:#fff;background:#071731 url('/brand/mountain-footer-v1.png') center center/cover no-repeat;overflow:hidden}
+.mountain-cta{position:relative;min-height:410px;display:flex;align-items:center;color:#fff;background:#071731 url('/brand/mountain-footer-v1.webp') center center/cover no-repeat;overflow:hidden}
 .mountain-cta-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,15,34,.93) 0%,rgba(5,22,49,.74) 54%,rgba(7,25,53,.42) 100%)}
 .mountain-cta-inner{position:relative;z-index:1;display:grid;grid-template-columns:1.08fr .65fr;gap:90px;align-items:end;padding-top:76px;padding-bottom:76px}
 .mountain-cta h2{font-size:clamp(2.8rem,4.8vw,5.2rem);max-width:840px}.mountain-cta-inner>div:last-child p{color:#d2dbea;font-size:1.06rem;line-height:1.75;margin-bottom:26px}

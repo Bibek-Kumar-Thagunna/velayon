@@ -12,6 +12,7 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "company-preview/**",
+    "bibek-portfolio/**",
     "subdomain-example/**",
     "src/app/notes/**",
     "src/app/work/**",

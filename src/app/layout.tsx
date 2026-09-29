@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   category: "Technology",
   alternates: { canonical: "/", languages: { "en": "https://velayon.com", "x-default": "https://velayon.com" } },
   manifest: "/manifest.webmanifest",
-  openGraph: { title: "Velayon Dynamics — Digital Products & Software Studio", description: "Original digital products and professionally scoped website and mobile app development from Nepal to the world.", url: "https://velayon.com", siteName: "Velayon Dynamics", locale: "en_US", type: "website", images: [{ url: "/brand/velayon-hero-3d-v2.png", width: 1536, height: 1024, alt: "Velayon Dynamics digital products and software services" }] },
-  twitter: { card: "summary_large_image", title: "Velayon Dynamics — Digital Products & Software Studio", description: "Original digital products and professionally scoped website and mobile app development from Nepal to the world.", images: ["/brand/velayon-hero-3d-v2.png"] },
+  openGraph: { title: "Velayon Dynamics — Digital Products & Software Studio", description: "Original digital products and professionally scoped website and mobile app development from Nepal to the world.", url: "https://velayon.com", siteName: "Velayon Dynamics", locale: "en_US", type: "website", images: [{ url: "/brand/velayon-hero-3d-v2.webp", width: 1536, height: 1024, alt: "Velayon Dynamics digital products and software services" }] },
+  twitter: { card: "summary_large_image", title: "Velayon Dynamics — Digital Products & Software Studio", description: "Original digital products and professionally scoped website and mobile app development from Nepal to the world.", images: ["/brand/velayon-hero-3d-v2.webp"] },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 } },
 };
 
@@ -51,7 +51,7 @@ const founderSchema = {
   "@id": "https://velayon.com/about/bibek-kumar-thagunna#person",
   name: "Bibek Kumar Thagunna",
   url: "https://velayon.com/about/bibek-kumar-thagunna",
-  image: "https://velayon.com/brand/bibek-kumar-thagunna-portrait-v1.png",
+  image: "https://velayon.com/brand/bibek-kumar-thagunna-portrait-v1.webp",
   jobTitle: "Founder, Designer and Software Developer",
   worksFor: { "@id": "https://velayon.com/#organization" },
   knowsAbout: ["Digital product design", "Web development", "Flutter", "React Native", "Expo", "Android development", "Agentic AI"],
