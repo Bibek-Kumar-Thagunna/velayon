@@ -77,11 +77,14 @@ form. To enable Paddle Checkout, copy `.env.example` to `.env.local` and set:
 NEXT_PUBLIC_PADDLE_ENV=sandbox
 NEXT_PUBLIC_PADDLE_CLIENT_TOKEN=test_your_client_side_token
 NEXT_PUBLIC_PADDLE_PRICE_ID=pri_your_sandbox_price_id
+PADDLE_WEBHOOK_SECRET=pdl_ntfset_your_sandbox_notification_secret
 ```
 
 Use only a Paddle **client-side token** in `NEXT_PUBLIC_PADDLE_CLIENT_TOKEN`.
-Never expose a Paddle API key. When moving to Live, replace the Sandbox price
-and token with the separately created Live values and set
+Never expose a Paddle API key or `PADDLE_WEBHOOK_SECRET`. The webhook URL is
+`/api/paddle/webhook`; subscribe it to `transaction.completed` in Paddle.
+When moving to Live, replace the Sandbox price, client-side token, and webhook
+secret with separately created Live values and set
 `NEXT_PUBLIC_PADDLE_ENV=production`.
 
 ## Performance
