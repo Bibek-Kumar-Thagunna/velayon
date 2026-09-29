@@ -8,7 +8,7 @@ export function MotionEffects() {
     if (reduced) return;
 
     const targets = document.querySelectorAll<HTMLElement>(
-      "main section > .container, .path-card, .price-card, .service-card, .tech-grid article, .category-grid article, .feature-card, .standard-card"
+      "main section > .container, .path-card, .price-card, .service-card, .tech-grid article, .category-grid article, .feature-card, .foundation-card, .standard-card, .brief-route article"
     );
     targets.forEach((target, index) => {
       target.classList.add("reveal-item");

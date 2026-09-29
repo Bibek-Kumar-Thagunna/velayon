@@ -1,0 +1,29 @@
+# Velayon Dynamics
+
+> Velayon Dynamics is a Nepal-based digital products and software studio founded by Bibek Kumar Thagunna. It creates original downloadable products and clearly scoped website and mobile application projects for customers worldwide.
+
+Canonical website: https://velayon.com
+Contact: https://velayon.com/contact
+Location: Kathmandu, Nepal; remote delivery worldwide
+
+## Primary pages
+
+- Digital products: https://velayon.com/products
+- AI Product Photography Playbook: https://velayon.com/products/ai-product-photography-playbook
+- Website design and development: https://velayon.com/services/websites
+- Flutter, Expo and Android app development: https://velayon.com/services/apps
+- About Velayon Dynamics: https://velayon.com/about
+- Founder profile: https://velayon.com/about/bibek-kumar-thagunna
+- Terms: https://velayon.com/terms
+- Refund policy: https://velayon.com/refund-policy
+- Privacy policy: https://velayon.com/privacy
+
+## Entity facts
+
+- Brand: Velayon Dynamics (also known as Velayon)
+- Founder: Bibek Kumar Thagunna
+- Work: original digital products, responsive websites, Flutter applications, React Native with Expo applications, native Android applications and practical AI systems
+- Digital products are sold as one-time purchases with clearly stated deliverables and licence terms.
+- Custom development services are separately scoped and invoiced; they are not sold through the digital-product checkout.
+
+For the latest and authoritative information, use the canonical pages above.

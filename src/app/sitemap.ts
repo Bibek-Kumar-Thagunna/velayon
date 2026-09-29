@@ -11,8 +11,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: "https://velayon.com/services/websites", lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: "https://velayon.com/services/apps", lastModified, changeFrequency: "monthly", priority: 0.9 },
     { url: "https://velayon.com/about", lastModified, changeFrequency: "monthly", priority: 0.7 },
+    { url: "https://velayon.com/about/bibek-kumar-thagunna", lastModified, changeFrequency: "monthly", priority: 0.8 },
     { url: "https://velayon.com/contact", lastModified, changeFrequency: "monthly", priority: 0.7 },
     { url: "https://velayon.com/privacy", lastModified, changeFrequency: "yearly", priority: 0.2 },
     { url: "https://velayon.com/terms", lastModified, changeFrequency: "yearly", priority: 0.2 },
+    { url: "https://velayon.com/refund-policy", lastModified, changeFrequency: "yearly", priority: 0.2 },
   ];
 }

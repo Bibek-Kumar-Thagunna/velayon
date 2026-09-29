@@ -6,5 +6,6 @@ export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
     sitemap: "https://velayon.com/sitemap.xml",
+    host: "https://velayon.com",
   };
 }

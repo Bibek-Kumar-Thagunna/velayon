@@ -1,5 +1,4 @@
-export const checkoutUrl =
-  "mailto:contact@velayon.com?subject=Purchase%20AI%20Product%20Photography%20Playbook&body=Hello%20Velayon%2C%20I%20would%20like%20to%20buy%20the%20AI%20Product%20Photography%20Playbook%20for%20USD%209.99.%20Please%20send%20the%20payment%20and%20delivery%20instructions.";
+export const checkoutUrl = "/contact?project=Digital%20product%20enquiry";
 
 export const websitePackages = [
   {

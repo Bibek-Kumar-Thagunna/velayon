@@ -50,7 +50,7 @@ export function ContactCTA() {
 
                     <div className="flex flex-col sm:flex-row gap-4">
                         <MagneticButton
-                            href="mailto:bibek@velayon.com?subject=Application for System Sprint"
+                            href="/contact?project=Something%20else"
                             className="btn-primary inline-flex items-center justify-center gap-2"
                         >
                             <span>🚀</span>

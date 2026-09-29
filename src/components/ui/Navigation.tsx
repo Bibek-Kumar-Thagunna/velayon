@@ -8,7 +8,7 @@ const navLinks = [
   { href: "/products", label: "Digital products" },
   { href: "/services/websites", label: "Websites" },
   { href: "/services/apps", label: "Mobile apps" },
-  { href: "/#process", label: "Process" },
+  { href: "/contact", label: "Contact" },
   { href: "/about", label: "About" },
 ];
 
@@ -24,9 +24,9 @@ export function Navigation() {
   return (
     <header className="site-header">
       <div className="container nav-inner">
-        <Link href="/" className="wordmark" aria-label="Velayon home">
+        <Link href="/" className="wordmark" aria-label="Velayon Dynamics home">
           <span className="wordmark-symbol" aria-hidden="true">V</span>
-          <span>VELAYON</span>
+          <span className="wordmark-name">VELAYON</span>
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
           {navLinks.map((link) => <Link key={link.href} href={link.href} className={active(link.href) ? "active" : ""}>{link.label}</Link>)}

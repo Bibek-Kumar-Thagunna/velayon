@@ -134,11 +134,11 @@ export function ContactSection() {
                     transition={{ duration: 0.5, delay: 0.5 }}
                 >
                     <MagneticButton
-                        href="mailto:bibek@velayon.com?subject=Work Opportunity&body=Hi Bibek,%0D%0A%0D%0AI saw your portfolio and would like to discuss a potential project/role..."
+                        href="/contact?project=Something%20else"
                         className="btn-primary inline-flex items-center gap-2"
                     >
                         <span>📧</span>
-                        <span>Email Me Directly</span>
+                        <span>Contact Bibek</span>
                     </MagneticButton>
                     <MagneticButton
                         href="https://linkedin.com/in/bibek-thagunna"

@@ -26,13 +26,12 @@ export default function Home() {
             <div className="home-hero-copy">
               <p className="eyebrow light">Digital products · Websites · Mobile apps</p>
               <h1>Useful digital work,<br /><span>made to launch.</span></h1>
-              <p className="hero-lead">Buy a practical creative system or commission a clearly scoped website or Android app—with visible deliverables, realistic timelines and direct support.</p>
+              <p className="hero-lead">Velayon Dynamics creates original digital products and clearly scoped websites and mobile apps—with visible deliverables, realistic timelines and direct support.</p>
               <div className="action-row"><Link className="button button-primary" href="/products">Explore digital products <span>↗</span></Link><Link className="button button-ghost" href="#services">View development services</Link></div>
               <div className="trust-row"><span>Published pricing</span><span>Worldwide delivery</span><span>Scope agreed before work</span></div>
             </div>
             <div className="home-hero-art">
-              <span className="hero-orbit orbit-one" /><span className="hero-orbit orbit-two" />
-              <Image src="/brand/velayon-hero-3d-v1.png" alt="3D presentation of Velayon digital products, website and mobile app development" fill priority sizes="(max-width: 900px) 100vw, 58vw" />
+              <Image src="/brand/velayon-hero-3d-v2.png" alt="3D presentation of a Velayon digital product, website laptop and mobile application" fill priority sizes="(max-width: 900px) 100vw, 58vw" />
             </div>
           </div>
         </section>

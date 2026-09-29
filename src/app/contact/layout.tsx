@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Discuss a Website or Mobile App Project",
-  description: "Tell Velayon what you need to build. We will confirm the best package, scope, timeline and any optional enhancements before work begins.",
+  title: "Contact Velayon Dynamics — Start a Digital Product or Software Project",
+  description: "Contact Velayon Dynamics in Nepal about a digital product, website, Flutter, Expo or Android application. Receive a clear scope response within one business day.",
   alternates: { canonical: "/contact" },
 };
 
